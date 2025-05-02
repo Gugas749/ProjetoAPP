@@ -1,5 +1,7 @@
 84;95;113  -  butao
+
 89;98;116  -  texto
+
 108;118;132  -  borda text box
 
 
