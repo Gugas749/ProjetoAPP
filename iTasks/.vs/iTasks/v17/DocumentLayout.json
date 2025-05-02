@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\conra\\source\\repos\\iTasks\\",
+  "WorkspaceRootPath": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\source\\repos\\itasks\\itasks\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\source\\repos\\itasks\\itasks\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\source\\repos\\itasks\\itasks\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\source\\repos\\itasks\\itasks\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +30,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "frmKanban.cs",
-              "DocumentMoniker": "C:\\Users\\conra\\source\\repos\\iTasks\\iTasks\\frmKanban.cs",
-              "RelativeDocumentMoniker": "iTasks\\frmKanban.cs",
-              "ToolTip": "C:\\Users\\conra\\source\\repos\\iTasks\\iTasks\\frmKanban.cs",
-              "RelativeToolTip": "iTasks\\frmKanban.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmKanban.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
+              "RelativeToolTip": "iTasks\\Views\\frmKanban.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:34:47.332Z",
+              "WhenOpened": "2025-05-02T09:10:07.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmKanban.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\conra\\source\\repos\\iTasks\\iTasks\\frmKanban.cs",
-              "RelativeDocumentMoniker": "iTasks\\frmKanban.cs",
-              "ToolTip": "C:\\Users\\conra\\source\\repos\\iTasks\\iTasks\\frmKanban.cs [Design]",
-              "RelativeToolTip": "iTasks\\frmKanban.cs [Design]",
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmLogin.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmLogin.cs [Design]",
+              "RelativeToolTip": "iTasks\\Views\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:34:41.283Z",
+              "WhenOpened": "2025-05-02T09:29:10.569Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\conra\\source\\repos\\iTasks\\iTasks\\frmLogin.cs",
-              "RelativeDocumentMoniker": "iTasks\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\conra\\source\\repos\\iTasks\\iTasks\\frmLogin.cs",
-              "RelativeToolTip": "iTasks\\frmLogin.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmKanban.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmKanban.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs [Design]",
+              "RelativeToolTip": "iTasks\\Views\\frmKanban.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:34:35.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\conra\\source\\repos\\iTasks\\iTasks\\frmLogin.cs",
-              "RelativeDocumentMoniker": "iTasks\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\conra\\source\\repos\\iTasks\\iTasks\\frmLogin.cs [Design]",
-              "RelativeToolTip": "iTasks\\frmLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:34:29.546Z",
+              "WhenOpened": "2025-05-02T09:10:05.993Z",
               "EditorCaption": " [Design]"
             }
           ]
