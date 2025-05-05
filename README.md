@@ -6,6 +6,7 @@
 
 ---------------------------------------------------------------------------------------------------
 CODIGOS
+
 using (var db = new DBContext())
 {
     var user = new Utilizador("admin", "admin", CaesarCipher.Encrypt("admin", 10));
@@ -15,10 +16,12 @@ using (var db = new DBContext())
 
 ---------------------------------------------------------------------------------------------------
 JIRA JIRA
+
 https://piogo10.atlassian.net/jira/software/projects/MS3C/summary
 
 ---------------------------------------------------------------------------------------------------
 LOGINS
+
 gestor1
 123
 
