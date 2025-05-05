@@ -4,11 +4,23 @@
 
 108;118;132  -  borda text box
 
-
-
+---------------------------------------------------------------------------------------------------
+CODIGOS
 using (var db = new DBContext())
 {
     var user = new Utilizador("admin", "admin", CaesarCipher.Encrypt("admin", 10));
     db.Utilizadores.Add(user);
     db.SaveChanges();
 }
+
+---------------------------------------------------------------------------------------------------
+JIRA JIRA
+https://piogo10.atlassian.net/jira/software/projects/MS3C/summary
+
+---------------------------------------------------------------------------------------------------
+LOGINS
+gestor1
+123
+
+programador1
+123
