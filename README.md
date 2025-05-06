@@ -1,3 +1,14 @@
+---------------------------------------------------------------------------------------------------
+FORMS FEITOS (MENOS DESIGN N SEI SE PODE SE)
+
+frmLogin (design mudado)
+frmGereTipoTarefas
+frmDetalhesTarefa (adicionar)
+frmDetalhesTarefa (detalhes) ?feito? (por testar)
+
+---------------------------------------------------------------------------------------------------
+DESIGN
+
 84;95;113  -  butao
 
 89;98;116  -  texto
