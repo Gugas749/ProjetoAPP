@@ -12,9 +12,17 @@ namespace iTasks
 {
     public partial class frmGereUtilizadores : Form
     {
-        public frmGereUtilizadores()
+        frmKanban parent;
+
+        public frmGereUtilizadores(frmKanban parent)
         {
             InitializeComponent();
+            this.parent = parent;
+        }
+
+        private void frmGereUtilizadores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

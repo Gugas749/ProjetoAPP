@@ -44,12 +44,12 @@
             this.listagensToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarefasTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarefasEmCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.butLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.lbBemVindo = new System.Windows.Forms.Label();
+            this.butNovaTarefa = new Guna.UI2.WinForms.Guna2Button();
+            this.butExeTarefa = new Guna.UI2.WinForms.Guna2Button();
+            this.butReiniciarTarefa = new Guna.UI2.WinForms.Guna2Button();
+            this.butTerminarTarefa = new Guna.UI2.WinForms.Guna2Button();
+            this.butVerPrevConclusao = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -152,12 +152,14 @@
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // exportarParaCSVToolStripMenuItem
             // 
             this.exportarParaCSVToolStripMenuItem.Name = "exportarParaCSVToolStripMenuItem";
             this.exportarParaCSVToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
             this.exportarParaCSVToolStripMenuItem.Text = "Exportar Tarefas Concluídas para CSV";
+            this.exportarParaCSVToolStripMenuItem.Click += new System.EventHandler(this.exportarParaCSVToolStripMenuItem_Click);
             // 
             // utilizadoresToolStripMenuItem
             // 
@@ -173,12 +175,14 @@
             this.gerirUtilizadoresToolStripMenuItem.Name = "gerirUtilizadoresToolStripMenuItem";
             this.gerirUtilizadoresToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.gerirUtilizadoresToolStripMenuItem.Text = "Gerir Utilizadores";
+            this.gerirUtilizadoresToolStripMenuItem.Click += new System.EventHandler(this.gerirUtilizadoresToolStripMenuItem_Click);
             // 
             // gerirTiposDeTarefasToolStripMenuItem
             // 
             this.gerirTiposDeTarefasToolStripMenuItem.Name = "gerirTiposDeTarefasToolStripMenuItem";
             this.gerirTiposDeTarefasToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.gerirTiposDeTarefasToolStripMenuItem.Text = "Gerir Tipos de Tarefas";
+            this.gerirTiposDeTarefasToolStripMenuItem.Click += new System.EventHandler(this.gerirTiposDeTarefasToolStripMenuItem_Click);
             // 
             // listagensToolStripMenuItem
             // 
@@ -192,121 +196,128 @@
             // tarefasTerminadasToolStripMenuItem
             // 
             this.tarefasTerminadasToolStripMenuItem.Name = "tarefasTerminadasToolStripMenuItem";
-            this.tarefasTerminadasToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.tarefasTerminadasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tarefasTerminadasToolStripMenuItem.Text = "Tarefas Concluídas";
+            this.tarefasTerminadasToolStripMenuItem.Click += new System.EventHandler(this.tarefasTerminadasToolStripMenuItem_Click);
             // 
             // tarefasEmCursoToolStripMenuItem
             // 
             this.tarefasEmCursoToolStripMenuItem.Name = "tarefasEmCursoToolStripMenuItem";
-            this.tarefasEmCursoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.tarefasEmCursoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tarefasEmCursoToolStripMenuItem.Text = "Tarefas em Curso";
+            this.tarefasEmCursoToolStripMenuItem.Click += new System.EventHandler(this.tarefasEmCursoToolStripMenuItem_Click);
             // 
-            // label1
+            // lbBemVindo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1037, 42);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Bem vindo: <Nome Utilizador>";
+            this.lbBemVindo.AutoSize = true;
+            this.lbBemVindo.Location = new System.Drawing.Point(1037, 42);
+            this.lbBemVindo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbBemVindo.Name = "lbBemVindo";
+            this.lbBemVindo.Size = new System.Drawing.Size(187, 16);
+            this.lbBemVindo.TabIndex = 9;
+            this.lbBemVindo.Text = "Bem vindo: <Nome Utilizador>";
             // 
-            // butLogin
+            // butNovaTarefa
             // 
-            this.butLogin.BorderRadius = 7;
-            this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.butLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.butLogin.ForeColor = System.Drawing.Color.White;
-            this.butLogin.IndicateFocus = true;
-            this.butLogin.Location = new System.Drawing.Point(20, 618);
-            this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(139, 28);
-            this.butLogin.TabIndex = 11;
-            this.butLogin.Text = "Nova Tarefa";
+            this.butNovaTarefa.BorderRadius = 7;
+            this.butNovaTarefa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butNovaTarefa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butNovaTarefa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butNovaTarefa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butNovaTarefa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.butNovaTarefa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.butNovaTarefa.ForeColor = System.Drawing.Color.White;
+            this.butNovaTarefa.IndicateFocus = true;
+            this.butNovaTarefa.Location = new System.Drawing.Point(20, 618);
+            this.butNovaTarefa.Name = "butNovaTarefa";
+            this.butNovaTarefa.Size = new System.Drawing.Size(139, 28);
+            this.butNovaTarefa.TabIndex = 11;
+            this.butNovaTarefa.Text = "Nova Tarefa";
+            this.butNovaTarefa.Click += new System.EventHandler(this.butNovaTarefa_Click);
             // 
-            // guna2Button1
+            // butExeTarefa
             // 
-            this.guna2Button1.BorderRadius = 7;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.IndicateFocus = true;
-            this.guna2Button1.Location = new System.Drawing.Point(229, 618);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(195, 28);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "Executar Tarefa >>";
+            this.butExeTarefa.BorderRadius = 7;
+            this.butExeTarefa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butExeTarefa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butExeTarefa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butExeTarefa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butExeTarefa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.butExeTarefa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.butExeTarefa.ForeColor = System.Drawing.Color.White;
+            this.butExeTarefa.IndicateFocus = true;
+            this.butExeTarefa.Location = new System.Drawing.Point(230, 618);
+            this.butExeTarefa.Name = "butExeTarefa";
+            this.butExeTarefa.Size = new System.Drawing.Size(195, 28);
+            this.butExeTarefa.TabIndex = 12;
+            this.butExeTarefa.Text = "Executar Tarefa >>";
+            this.butExeTarefa.Click += new System.EventHandler(this.butExeTarefa_Click);
             // 
-            // guna2Button2
+            // butReiniciarTarefa
             // 
-            this.guna2Button2.BorderRadius = 7;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.IndicateFocus = true;
-            this.guna2Button2.Location = new System.Drawing.Point(431, 618);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(192, 28);
-            this.guna2Button2.TabIndex = 13;
-            this.guna2Button2.Text = "<< Reiniciar Tarefa";
+            this.butReiniciarTarefa.BorderRadius = 7;
+            this.butReiniciarTarefa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butReiniciarTarefa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butReiniciarTarefa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butReiniciarTarefa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butReiniciarTarefa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.butReiniciarTarefa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.butReiniciarTarefa.ForeColor = System.Drawing.Color.White;
+            this.butReiniciarTarefa.IndicateFocus = true;
+            this.butReiniciarTarefa.Location = new System.Drawing.Point(431, 618);
+            this.butReiniciarTarefa.Name = "butReiniciarTarefa";
+            this.butReiniciarTarefa.Size = new System.Drawing.Size(192, 28);
+            this.butReiniciarTarefa.TabIndex = 13;
+            this.butReiniciarTarefa.Text = "<< Reiniciar Tarefa";
+            this.butReiniciarTarefa.Click += new System.EventHandler(this.butReiniciarTarefa_Click);
             // 
-            // guna2Button3
+            // butTerminarTarefa
             // 
-            this.guna2Button3.BorderRadius = 7;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.IndicateFocus = true;
-            this.guna2Button3.Location = new System.Drawing.Point(633, 618);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(192, 28);
-            this.guna2Button3.TabIndex = 14;
-            this.guna2Button3.Text = "Terminar Tarefa >>";
+            this.butTerminarTarefa.BorderRadius = 7;
+            this.butTerminarTarefa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butTerminarTarefa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butTerminarTarefa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butTerminarTarefa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butTerminarTarefa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.butTerminarTarefa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.butTerminarTarefa.ForeColor = System.Drawing.Color.White;
+            this.butTerminarTarefa.IndicateFocus = true;
+            this.butTerminarTarefa.Location = new System.Drawing.Point(629, 618);
+            this.butTerminarTarefa.Name = "butTerminarTarefa";
+            this.butTerminarTarefa.Size = new System.Drawing.Size(192, 28);
+            this.butTerminarTarefa.TabIndex = 14;
+            this.butTerminarTarefa.Text = "Terminar Tarefa >>";
+            this.butTerminarTarefa.Click += new System.EventHandler(this.butTerminarTarefa_Click);
             // 
-            // guna2Button4
+            // butVerPrevConclusao
             // 
-            this.guna2Button4.BorderRadius = 7;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.IndicateFocus = true;
-            this.guna2Button4.Location = new System.Drawing.Point(16, 36);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(223, 28);
-            this.guna2Button4.TabIndex = 15;
-            this.guna2Button4.Text = "Ver Previsão de Conclusão";
+            this.butVerPrevConclusao.BorderRadius = 7;
+            this.butVerPrevConclusao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butVerPrevConclusao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butVerPrevConclusao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butVerPrevConclusao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butVerPrevConclusao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.butVerPrevConclusao.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.butVerPrevConclusao.ForeColor = System.Drawing.Color.White;
+            this.butVerPrevConclusao.IndicateFocus = true;
+            this.butVerPrevConclusao.Location = new System.Drawing.Point(16, 36);
+            this.butVerPrevConclusao.Name = "butVerPrevConclusao";
+            this.butVerPrevConclusao.Size = new System.Drawing.Size(223, 28);
+            this.butVerPrevConclusao.TabIndex = 15;
+            this.butVerPrevConclusao.Text = "Ver Previsão de Conclusão";
+            this.butVerPrevConclusao.Click += new System.EventHandler(this.butVerPrevConclusao_Click);
             // 
             // frmKanban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 661);
-            this.Controls.Add(this.guna2Button4);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.butLogin);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.butVerPrevConclusao);
+            this.Controls.Add(this.butTerminarTarefa);
+            this.Controls.Add(this.butExeTarefa);
+            this.Controls.Add(this.butReiniciarTarefa);
+            this.Controls.Add(this.butNovaTarefa);
+            this.Controls.Add(this.lbBemVindo);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -345,11 +356,11 @@
         private System.Windows.Forms.ToolStripMenuItem listagensToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tarefasTerminadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tarefasEmCursoToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button butLogin;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private System.Windows.Forms.Label lbBemVindo;
+        private Guna.UI2.WinForms.Guna2Button butExeTarefa;
+        private Guna.UI2.WinForms.Guna2Button butTerminarTarefa;
+        private Guna.UI2.WinForms.Guna2Button butReiniciarTarefa;
+        private Guna.UI2.WinForms.Guna2Button butNovaTarefa;
+        private Guna.UI2.WinForms.Guna2Button butVerPrevConclusao;
     }
 }

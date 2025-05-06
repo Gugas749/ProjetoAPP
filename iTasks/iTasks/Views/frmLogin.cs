@@ -31,7 +31,6 @@ namespace iTasks
         {
             if(txtBoxUsername.Text.Trim().Length > 0)
             {
-
                 if (txtBoxPassword.Text.Trim().Length > 0)
                 {
                     Utilizador user = null;
@@ -72,7 +71,7 @@ namespace iTasks
                         if (selectedUser.Username == insertedUsername)
                         {
                             response = 1;
-                            if (selectedUser.Password == CaesarCipher.Encrypt(insertedPassword, 10))
+                            if (selectedUser.Password == insertedPassword) //CaesarCipher.Encrypt(insertedPassword, 10))
                             {
                                 response = 2;
                                 user = selectedUser;
