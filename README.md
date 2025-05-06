@@ -2,8 +2,11 @@
 FORMS FEITOS (MENOS DESIGN N SEI SE PODE SE)
 
 frmLogin (design mudado)
+
 frmGereTipoTarefas
+
 frmDetalhesTarefa (adicionar)
+
 frmDetalhesTarefa (detalhes) ?feito? (por testar)
 
 ---------------------------------------------------------------------------------------------------
