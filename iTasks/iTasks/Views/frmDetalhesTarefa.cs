@@ -85,9 +85,9 @@ namespace iTasks
         #region FUNCOES
         private void enableDisable(int role)
         {
-            // addd txt do titulo
             butGravar.Enabled = false;
             //----------------------
+            txtTitulo.Enabled = false;
             txtDesc.Enabled = false;
             txtStoryPoints.Enabled = false;
             txtOrdem.Enabled = false;
@@ -110,6 +110,7 @@ namespace iTasks
                     butFechar.Enabled = true;
                     butGravar.Enabled = true;
                     //----------------------
+                    txtTitulo.Enabled = true;
                     txtDesc.Enabled = true;
                     txtStoryPoints.Enabled = true;
                     txtOrdem.Enabled = true;
@@ -126,8 +127,7 @@ namespace iTasks
         private void saveData()
         {
             Tarefa tarefa = new Tarefa();
-            // addd txt do titulo
-            // tarefa.Titulo = txtTitulo.Text.Trim();
+            tarefa.Titulo = txtTitulo.Text.Trim();
             tarefa.IdGestor = user.Id;
             tarefa.IdProgramador = listProgramadors[comboBoxProgramador.SelectedIndex].Id;
             tarefa.OrdemExecucao = Convert.ToInt32(txtOrdem.Text.Trim());
@@ -150,7 +150,11 @@ namespace iTasks
         {
             bool aux = true;
 
-            // addd txt do titulo
+            if(txtTitulo.Text.Trim().Length <= 0)
+            {
+                aux = false;
+                errorProvider1.SetError(txtTitulo, "Este campo é necessario.");
+            }
 
             if (txtDesc.Text.Trim().Length <= 0)
             {
@@ -240,7 +244,7 @@ namespace iTasks
             else
             { // prog
 
-                // addd txt do titulo
+                txtTitulo.Text = tarefaRecebida.Titulo.ToString();
                 txtId.Text = tarefaRecebida.Id.ToString();
                 txtEstado.Text = tarefaRecebida.EstadoAtual.ToString();
                 txtDataCriacao.Text = tarefaRecebida.DataCriacao.ToString();
@@ -290,7 +294,7 @@ namespace iTasks
             id++;
             txtId.Text = id.ToString();
 
-            // addd txt do titulo
+            txtTitulo.Text = "";
             txtDesc.Text = "";
             comboBoxProgramador.SelectedItem = null;
             comboBoxTipoTarefa.SelectedItem = null;
