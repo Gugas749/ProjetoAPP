@@ -19,6 +19,9 @@ namespace iTasks
 
         Utilizador user = new Utilizador();
         int userRole = 0;
+        List<Tarefa> listToDo = new List<Tarefa>();
+        List<Tarefa> listDoing = new List<Tarefa>();
+        List<Tarefa> listDone = new List<Tarefa>();
 
         public frmKanban()
         {
@@ -46,12 +49,14 @@ namespace iTasks
             }
 
             enableDisable(userRole);
+            loadLists();
         }
 
         #region BUTOES
         private void butNovaTarefa_Click(object sender, EventArgs e)
         {
-            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole);
+            Tarefa tarefa = new Tarefa();
+            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
             frm.ShowDialog();
         }
         private void butExeTarefa_Click(object sender, EventArgs e)
@@ -166,6 +171,38 @@ namespace iTasks
                     tarefasEmCursoToolStripMenuItem.Enabled = true;
                     //----------------------
                     break;
+            }
+        }
+        private void loadLists()
+        {
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    List<Tarefa> tarefas = db.Tarefas.ToList();
+                    foreach (Tarefa selected in tarefas)
+                    {
+                        switch (selected.EstadoAtual)
+                        {
+                            case EstadoAtual.ToDo:
+                                listToDo.Add(selected);
+                                lstTodo.Items.Add(selected.ToString());
+                                break;
+                            case EstadoAtual.Doing:
+                                listDoing.Add(selected);
+                                lstDoing.Items.Add(selected.ToString());
+                                break;
+                            case EstadoAtual.Done:
+                                listDone.Add(selected);
+                                lstDone.Items.Add(selected.ToString());
+                                break;
+                        }
+                    }
+                }
+                catch
+                {
+
+                }
             }
         }
         #endregion

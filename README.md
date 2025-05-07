@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
-FORMS FEITOS (MENOS DESIGN N SEI SE PODE SE)
+FORMS FEITOS
 
-frmLogin (design mudado)
+frmLogin
 
 frmGereTipoTarefas
 
@@ -41,3 +41,19 @@ gestor1
 
 programador1
 123
+
+---------------------------------------------------------------------------------------------------
+CONTROLADORES
+
+INSERT
+
+UPDATE
+
+DELETE
+
+---------------------------------------------------------------------------------------------------
+USER ROLES
+
+1 - Programador
+
+2 - Gestor

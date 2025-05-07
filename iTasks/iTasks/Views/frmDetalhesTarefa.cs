@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.AnimatorNS;
+using iTasks.Controller;
 using iTasks.Model;
 
 namespace iTasks
 {
     public partial class frmDetalhesTarefa : Form
     {
+        ControllerDetalhesTarefa controller = new ControllerDetalhesTarefa();
         Utilizador user = new Utilizador();
         int userRole = 0;
         bool changedSomething = false;
@@ -82,6 +85,7 @@ namespace iTasks
         #region FUNCOES
         private void enableDisable(int role)
         {
+            // addd txt do titulo
             butGravar.Enabled = false;
             //----------------------
             txtDesc.Enabled = false;
@@ -102,7 +106,6 @@ namespace iTasks
 
             switch (role)
             {
-
                 case 2:
                     butFechar.Enabled = true;
                     butGravar.Enabled = true;
@@ -123,6 +126,8 @@ namespace iTasks
         private void saveData()
         {
             Tarefa tarefa = new Tarefa();
+            // addd txt do titulo
+            // tarefa.Titulo = txtTitulo.Text.Trim();
             tarefa.IdGestor = user.Id;
             tarefa.IdProgramador = listProgramadors[comboBoxProgramador.SelectedIndex].Id;
             tarefa.OrdemExecucao = Convert.ToInt32(txtOrdem.Text.Trim());
@@ -136,17 +141,16 @@ namespace iTasks
             tarefa.DataCriacao = DateTime.Now;
             tarefa.EstadoAtual = EstadoAtual.ToDo;
 
-            using (var db = new DBContext())
-            {
-                db.Tarefas.Add(tarefa);
-                db.SaveChanges();
-                MessageBox.Show("Tarefa adicionada", "A tarefa foi adicionada com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clearAll();
-            }
+            controller.saveData(tarefa);
+
+            MessageBox.Show("Tarefa adicionada", "A tarefa foi adicionada com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            clearAll();
         }
         private bool allFieldsFilled()
         {
             bool aux = true;
+
+            // addd txt do titulo
 
             if (txtDesc.Text.Trim().Length <= 0)
             {
@@ -183,7 +187,7 @@ namespace iTasks
         private void loadInfos()
         {
             if (userRole == 2)
-            {
+            { // gestor
                 txtDataCriacao.Text = DateTime.Now.ToString();
                 txtEstado.Text = EstadoAtual.ToDo.ToString();
                 txtDataRealini.Text = "Indisponivel";
@@ -234,7 +238,9 @@ namespace iTasks
                 }
             }
             else
-            {
+            { // prog
+
+                // addd txt do titulo
                 txtId.Text = tarefaRecebida.Id.ToString();
                 txtEstado.Text = tarefaRecebida.EstadoAtual.ToString();
                 txtDataCriacao.Text = tarefaRecebida.DataCriacao.ToString();
@@ -284,6 +290,7 @@ namespace iTasks
             id++;
             txtId.Text = id.ToString();
 
+            // addd txt do titulo
             txtDesc.Text = "";
             comboBoxProgramador.SelectedItem = null;
             comboBoxTipoTarefa.SelectedItem = null;
