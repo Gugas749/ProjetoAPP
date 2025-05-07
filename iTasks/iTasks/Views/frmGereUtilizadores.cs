@@ -35,7 +35,8 @@ namespace iTasks
                 userRole = 2;
             else
                 userRole = 0;
-            
+
+            cbDepartamento.DataSource = Enum.GetValues(typeof(Departamento));
 
             getListUsers();
             loadList();
@@ -58,18 +59,39 @@ namespace iTasks
 
         private void loadList()
         {
-            int aux = 0;
-            foreach (Utilizador item in listUsers)
-            {
-                lstListaGestores.Items.Add(item.Id + " - " + item.Nome);
-                if (item.Id > aux)
-                {
-                    aux = item.Id;
-                }
-            }
-            aux++;
+            lstListaGestores.DataSource = listUsers;
 
-            txtIdGestor.Text = aux.ToString();
+            lstListaGestores.DisplayMember = "Nome"; 
+            lstListaGestores.ValueMember = "Id";
+        }
+
+        private void lstListaGestores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstListaGestores.SelectedIndex > -1)
+            {
+                user = (Utilizador)lstListaGestores.SelectedItem;
+
+                txtIdGestor.Text = user.Id.ToString();
+                txtNomeGestor.Text = user.Nome;
+                txtUsernameGestor.Text = user.Username;
+                txtPasswordGestor.Text = user.Password;
+
+                if (user is Gestor gestor)
+                {
+                    cbDepartamento.SelectedItem = gestor.Departamento;
+
+                    if (gestor.GereUtilizadores)
+                        chkGereUtilizadores.Checked = true;
+                    else
+                        chkGereUtilizadores.Checked = false;
+                }
+
+            }
+        }
+
+        private void btGravarGestor_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

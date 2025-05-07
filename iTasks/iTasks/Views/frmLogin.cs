@@ -25,7 +25,7 @@ namespace iTasks
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void butLogin_Click(object sender, EventArgs e)
