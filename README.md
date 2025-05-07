@@ -23,7 +23,12 @@ CODIGOS
 
 using (var db = new DBContext())
 {
-    var user = new Utilizador("admin", "admin", CaesarCipher.Encrypt("admin", 10));
+    Gestor user = new Gestor();
+    user.Nome = "Nome do utilizador";
+    user.Password = "1";
+    user.Username = "gest1";
+    user.GereUtilizadores = true;
+    user.Departamento = Departamento.Administracao;
     db.Utilizadores.Add(user);
     db.SaveChanges();
 }
@@ -36,11 +41,8 @@ https://piogo10.atlassian.net/jira/software/projects/MS3C/summary
 ---------------------------------------------------------------------------------------------------
 LOGINS
 
-gestor1
-123
-
-programador1
-123
+gest1
+1
 
 ---------------------------------------------------------------------------------------------------
 CONTROLADORES
@@ -57,3 +59,10 @@ USER ROLES
 1 - Programador
 
 2 - Gestor
+
+---------------------------------------------------------------------------------------------------
+ADICIONADO
+
+campo titulo no model tarefa
+
+botao delete no frmGereUtilizadores
