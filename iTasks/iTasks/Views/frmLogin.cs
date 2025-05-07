@@ -35,8 +35,7 @@ namespace iTasks
                 if (txtBoxPassword.Text.Trim().Length > 0)
                 {
                     Utilizador user = null;
-                    ControllerFrmLogin controllerFrmLogin = new ControllerFrmLogin();
-                    switch (controllerFrmLogin.GetUser(txtBoxUsername.Text.Trim(), txtBoxPassword.Text.Trim(), ref user))
+                    switch (GetUser(txtBoxUsername.Text.Trim(), txtBoxPassword.Text.Trim(), ref user))
                     {
                         case 0: // nao encontrou o user ou deu erro
                             MessageBox.Show("O utilizador não está registado na base de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -58,6 +57,35 @@ namespace iTasks
             {
                 errorProvider1.SetError(txtBoxUsername, "Este campo é necessario.");
             }
+        }
+
+        private int GetUser(string insertedUsername, string insertedPassword, ref Utilizador user)
+        {
+            int response = 0;
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    List<Utilizador> users = db.Utilizadores.ToList(); // SELECT * FROM Utilizadores
+                    foreach (Utilizador selectedUser in users)
+                    {
+                        if (selectedUser.Username == insertedUsername)
+                        {
+                            response = 1;
+                            if (selectedUser.Password == insertedPassword) //CaesarCipher.Encrypt(insertedPassword, 10))
+                            {
+                                response = 2;
+                                user = selectedUser;
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    response = 0;
+                }
+            }
+            return response;
         }
     }
 }
