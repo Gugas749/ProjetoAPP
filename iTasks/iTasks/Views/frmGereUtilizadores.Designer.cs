@@ -74,6 +74,7 @@
             this.btGravarGestor.TabIndex = 37;
             this.btGravarGestor.Text = "Gravar Dados";
             this.btGravarGestor.UseVisualStyleBackColor = true;
+            this.btGravarGestor.Click += new System.EventHandler(this.btGravarGestor_Click);
             // 
             // txtNomeGestor
             // 
@@ -134,6 +135,7 @@
             this.lstListaGestores.Name = "lstListaGestores";
             this.lstListaGestores.Size = new System.Drawing.Size(357, 537);
             this.lstListaGestores.TabIndex = 0;
+            this.lstListaGestores.SelectedIndexChanged += new System.EventHandler(this.lstListaGestores_SelectedIndexChanged);
             // 
             // groupBox2
             // 
