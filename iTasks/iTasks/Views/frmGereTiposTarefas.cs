@@ -45,6 +45,7 @@ namespace iTasks
 
         private void loadList()
         {
+            lstLista.Items.Clear();
             int aux = 0;
             foreach (TipoTarefa item in tiposTarefas)
             {
