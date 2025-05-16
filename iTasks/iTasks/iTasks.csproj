@@ -61,7 +61,7 @@
   <ItemGroup>
     <Compile Include="CaesarCipher.cs" />
     <Compile Include="Controller\ControllerDetalhesTarefa.cs" />
-    <Compile Include="Controller\ControllerFrmLogin.cs" />
+    <Compile Include="Controller\ControllerFrmKanban.cs" />
     <Compile Include="Model\DBContext.cs" />
     <Compile Include="Model\Enum.cs" />
     <Compile Include="Model\Gestor.cs" />

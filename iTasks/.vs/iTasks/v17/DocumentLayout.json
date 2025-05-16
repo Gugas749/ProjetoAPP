@@ -1,34 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\",
+  "WorkspaceRootPath": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\piogo\\desktop\\projetoapp-main\\itasks\\itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\piogo\\desktop\\projetoapp-main\\itasks\\itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\piogo\\desktop\\projetoapp-main\\itasks\\itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\piogo\\desktop\\projetoapp-main\\itasks\\itasks\\model\\programador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\model\\programador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\piogo\\desktop\\projetoapp-main\\itasks\\itasks\\model\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\model\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\piogo\\desktop\\projetoapp-main\\itasks\\itasks\\model\\gestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\model\\gestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\piogo\\desktop\\projetoapp-main\\itasks\\itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,91 +26,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Programador.cs",
-              "DocumentMoniker": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Model\\Programador.cs",
-              "RelativeDocumentMoniker": "iTasks\\Model\\Programador.cs",
-              "ToolTip": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Model\\Programador.cs",
-              "RelativeToolTip": "iTasks\\Model\\Programador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T10:41:25.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Gestor.cs",
-              "DocumentMoniker": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Model\\Gestor.cs",
-              "RelativeDocumentMoniker": "iTasks\\Model\\Gestor.cs",
-              "ToolTip": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Model\\Gestor.cs",
-              "RelativeToolTip": "iTasks\\Model\\Gestor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T09:55:35.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Enum.cs",
-              "DocumentMoniker": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Model\\Enum.cs",
-              "RelativeDocumentMoniker": "iTasks\\Model\\Enum.cs",
-              "ToolTip": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Model\\Enum.cs",
-              "RelativeToolTip": "iTasks\\Model\\Enum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T09:39:40.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmGereUtilizadores.cs",
-              "DocumentMoniker": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Views\\frmGereUtilizadores.cs",
-              "RelativeDocumentMoniker": "iTasks\\Views\\frmGereUtilizadores.cs",
-              "ToolTip": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Views\\frmGereUtilizadores.cs",
-              "RelativeToolTip": "iTasks\\Views\\frmGereUtilizadores.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAYwD8AAAAAAAAAAAAAAA==",
+              "Title": "frmKanban.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmKanban.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs [Design]",
+              "RelativeToolTip": "iTasks\\Views\\frmKanban.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T09:11:19.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmGereUtilizadores.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Views\\frmGereUtilizadores.cs",
-              "RelativeDocumentMoniker": "iTasks\\Views\\frmGereUtilizadores.cs",
-              "ToolTip": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Views\\frmGereUtilizadores.cs [Design]",
-              "RelativeToolTip": "iTasks\\Views\\frmGereUtilizadores.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T09:10:00.023Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmDetalhesTarefa.cs",
-              "DocumentMoniker": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Views\\frmDetalhesTarefa.cs",
-              "RelativeDocumentMoniker": "iTasks\\Views\\frmDetalhesTarefa.cs",
-              "ToolTip": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Views\\frmDetalhesTarefa.cs",
-              "RelativeToolTip": "iTasks\\Views\\frmDetalhesTarefa.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAuwOQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:32:15.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmDetalhesTarefa.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Views\\frmDetalhesTarefa.cs",
-              "RelativeDocumentMoniker": "iTasks\\Views\\frmDetalhesTarefa.cs",
-              "ToolTip": "C:\\Users\\piogo\\Desktop\\ProjetoAPP-main\\iTasks\\iTasks\\Views\\frmDetalhesTarefa.cs [Design]",
-              "RelativeToolTip": "iTasks\\Views\\frmDetalhesTarefa.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:31:47.104Z",
+              "WhenOpened": "2025-05-15T09:06:50.711Z",
               "EditorCaption": " [Design]"
             }
           ]

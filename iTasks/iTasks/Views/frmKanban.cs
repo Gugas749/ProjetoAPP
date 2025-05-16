@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTasks.Controller;
 using iTasks.Model;
 
 namespace iTasks
@@ -17,6 +18,7 @@ namespace iTasks
         frmLogin frmLogin;
         #endregion
 
+        ControllerFrmKanban controller = new ControllerFrmKanban();
         Utilizador user = new Utilizador();
         int userRole = 0;
         List<Tarefa> listToDo = new List<Tarefa>();
@@ -58,18 +60,76 @@ namespace iTasks
             Tarefa tarefa = new Tarefa();
             frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
             frm.ShowDialog();
+            loadLists();
         }
         private void butExeTarefa_Click(object sender, EventArgs e)
         {
-
+            if (lstTodo.SelectedIndex >= 0 && lstTodo.SelectedIndex != null)
+            {
+                string selected = lstTodo.SelectedItem.ToString();
+                string numberPart = selected.Split('-')[0].Trim();
+                if (!numberPart.Equals("") && !numberPart.Equals(" "))
+                {
+                    int idAux = Convert.ToInt32(numberPart);
+                    Tarefa aux = controller.updateTarefa(idAux, EstadoAtual.Doing);
+                    foreach (Tarefa tarefa in listToDo)
+                    {
+                        if (tarefa.Id == idAux)
+                        {
+                            listToDo.Remove(tarefa);
+                            break;
+                        }
+                    }
+                    listDoing.Add(aux);
+                }
+                updateLists();
+            }
         }
         private void butReiniciarTarefa_Click(object sender, EventArgs e)
         {
-
+            if(lstDone.SelectedIndex >= 0 && lstDone.SelectedIndex != null)
+            {
+                string selected = lstDone.SelectedItem.ToString();
+                string numberPart = selected.Split('-')[0].Trim();
+                if (!numberPart.Equals("") && !numberPart.Equals(" "))
+                {
+                    int idAux = Convert.ToInt32(numberPart);
+                    Tarefa aux = controller.updateTarefa(idAux, EstadoAtual.Doing);
+                    foreach (Tarefa tarefa in listDone)
+                    {
+                        if (tarefa.Id == idAux)
+                        {
+                            listDone.Remove(tarefa);
+                            break;
+                        }
+                    }
+                    listDoing.Add(aux);
+                }
+                updateLists();
+            }
         }
         private void butTerminarTarefa_Click(object sender, EventArgs e)
         {
-
+            if (lstDoing.SelectedIndex >= 0 && lstDoing.SelectedIndex != null)
+            {
+                string selected = lstDoing.SelectedItem.ToString();
+                string numberPart = selected.Split('-')[0].Trim();
+                if (!numberPart.Equals("") && !numberPart.Equals(" "))
+                {
+                    int idAux = Convert.ToInt32(numberPart);
+                    Tarefa aux = controller.updateTarefa(idAux, EstadoAtual.Done);
+                    foreach (Tarefa tarefa in listDoing)
+                    {
+                        if (tarefa.Id == idAux)
+                        {
+                            listDoing.Remove(tarefa);
+                            break;
+                        }
+                    }
+                    listDone.Add(aux);
+                }
+                updateLists();
+            }
         }
         private void butVerPrevConclusao_Click(object sender, EventArgs e)
         {
@@ -77,7 +137,24 @@ namespace iTasks
         }
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            frmLogin.ShowDialog();
+            if (user != null && user.Id != 0)
+            {
+                lbBemVindo.Text = "Bem vindo: " + user.Username.ToString();
+            }
+
+            if (user is Programador programador)
+            {
+                userRole = 1;
+            }
+            else if (user is Gestor gestor)
+            {
+                userRole = 2;
+            }
+
+            enableDisable(userRole);
+            loadLists();
         }
         private void exportarParaCSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -102,6 +179,72 @@ namespace iTasks
         {
             frmConsultaTarefasEmCurso frm = new frmConsultaTarefasEmCurso();
             frm.ShowDialog();
+        }
+        private void lstTodo_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstTodo.SelectedIndex >= 0 && lstTodo.SelectedIndex != null)
+            {
+                string selected = lstTodo.SelectedItem.ToString();
+                string numberPart = selected.Split('-')[0].Trim();
+                if (!numberPart.Equals("") && !numberPart.Equals(" "))
+                {
+                    int idAux = Convert.ToInt32(numberPart);
+                    foreach (Tarefa tarefa in listToDo)
+                    {
+                        if (tarefa.Id == idAux)
+                        {
+                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
+                            frm.ShowDialog();
+                            updateLists();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        private void lstDoing_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstDoing.SelectedIndex >= 0 && lstDoing.SelectedIndex != null)
+            {
+                string selected = lstDoing.SelectedItem.ToString();
+                string numberPart = selected.Split('-')[0].Trim();
+                if (!numberPart.Equals("") && !numberPart.Equals(" "))
+                {
+                    int idAux = Convert.ToInt32(numberPart);
+                    foreach (Tarefa tarefa in listDoing)
+                    {
+                        if (tarefa.Id == idAux)
+                        {
+                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
+                            frm.ShowDialog();
+                            updateLists();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        private void lstDone_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstDone.SelectedIndex >= 0 && lstDone.SelectedIndex != null)
+            {
+                string selected = lstDone.SelectedItem.ToString();
+                string numberPart = selected.Split('-')[0].Trim();
+                if (!numberPart.Equals("") && !numberPart.Equals(" "))
+                {
+                    int idAux = Convert.ToInt32(numberPart);
+                    foreach (Tarefa tarefa in listDone)
+                    {
+                        if (tarefa.Id == idAux)
+                        {
+                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
+                            frm.ShowDialog();
+                            updateLists();
+                            break;
+                        }
+                    }
+                }
+            }
         }
         #endregion
 
@@ -205,6 +348,24 @@ namespace iTasks
                 {
 
                 }
+            }
+        }
+        private void updateLists()
+        {
+            lstTodo.Items.Clear();
+            lstDoing.Items.Clear();
+            lstDone.Items.Clear();
+            foreach (Tarefa tarefa in listToDo)
+            {
+                lstTodo.Items.Add(tarefa.ToString());
+            }
+            foreach (Tarefa tarefa in listDoing)
+            {
+                lstDoing.Items.Add(tarefa.ToString());
+            }
+            foreach (Tarefa tarefa in listDone)
+            {
+                lstDone.Items.Add(tarefa.ToString());
             }
         }
         #endregion
