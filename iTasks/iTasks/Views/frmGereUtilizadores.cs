@@ -1,4 +1,5 @@
-﻿using iTasks.Model;
+﻿using iTasks.Controller;
+using iTasks.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace iTasks
         Programador prog = new Programador();
         List<Programador> listProg = new List<Programador>();
 
+        ControllerFrmGereUtilizadores controller = new ControllerFrmGereUtilizadores();
 
         public frmGereUtilizadores(frmKanban parent)
         {
@@ -38,7 +40,6 @@ namespace iTasks
         }
 
         #region GereGestor
-
         private void loadListGest()
         {
             getListUsers();
@@ -49,7 +50,6 @@ namespace iTasks
             lstListaGestores.DisplayMember = "Nome";
             lstListaGestores.ValueMember = "Id";
         }
-
         private void getListUsers()
         {
             using (var db = new DBContext())
@@ -87,8 +87,6 @@ namespace iTasks
                 }
             }
         }
-
-
         private void lstListaGestores_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstListaGestores.SelectedIndex > -1)
@@ -114,7 +112,6 @@ namespace iTasks
 
             }
         }
-
         private bool allFieldsFilledGest()
         {
             bool aux = true;
@@ -145,7 +142,6 @@ namespace iTasks
 
             return aux;
         }
-
         private void btGravarGestor_Click(object sender, EventArgs e)
         {
             if (lstListaGestores.SelectedIndex > -1)
@@ -156,62 +152,53 @@ namespace iTasks
                 }
             }
         }
-
         private void savedataGest()
         {
-            using (var db = new DBContext())
+            Gestor info = new Gestor();
+            info.Id = gestor.Id;
+            info.Nome = txtNomeGestor.Text;
+            info.Username = txtUsernameGestor.Text;
+            info.Password = txtPasswordGestor.Text;
+            info.Departamento = (Departamento)cbDepartamento.SelectedItem;
+            info.GereUtilizadores = chkGereUtilizadores.Checked;
+            int aux = controller.savedata(info);
+            switch (aux)
             {
-                try
-                {
-                    gestor.Nome = txtNomeGestor.Text;
-                    gestor.Username = txtUsernameGestor.Text;
-                    gestor.Password = txtPasswordGestor.Text;
-                    gestor.Departamento = (Departamento)cbDepartamento.SelectedItem;
-                    gestor.GereUtilizadores = chkGereUtilizadores.Checked;
-                    db.Entry(gestor).State = System.Data.Entity.EntityState.Modified;
-
-                    db.SaveChanges();
-                    loadListGest();
+                case 0:
+                    MessageBox.Show("Erro ao gravar utilizador.");
+                    break;
+                case 1:
                     MessageBox.Show("Alterações Guardadas");
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show("Erro ao gravar utilizador: " + e.Message);
-                }
+                    loadListGest();
+                    break;
             }
         }
-
         private void btDeleteGestor_Click(object sender, EventArgs e)
         {
             if (lstListaGestores.SelectedIndex > -1)
             {
-                using (var db = new DBContext())
-                {
-                    try
-                    {
-                        DialogResult dialogResult = MessageBox.Show("Deseja mesmo eleminar? \nUser selecionado: " + gestor.Nome, "Confirmação", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Deseja mesmo eleminar? \nUser selecionado: " + gestor.Nome, "Confirmação", MessageBoxButtons.YesNo);
 
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            db.Entry(gestor).State = System.Data.Entity.EntityState.Deleted;
-                            db.SaveChanges();
-                            loadListGest();
-                            MessageBox.Show("Utilizador eliminado com sucesso.");
-                        }
-                    }
-                    catch
+                if (dialogResult == DialogResult.Yes)
+                {
+                    int aux = controller.deletedata(gestor);
+                    switch (aux)
                     {
-                        MessageBox.Show("Erro ao eliminar utilizador: ");
+                        case 0:
+                            MessageBox.Show("Erro ao eliminar utilizador");
+                            break;
+                        case 1:
+                            MessageBox.Show("Utilizador eliminado com sucesso.");
+                            loadListGest();
+                            break;
                     }
                 }
             }
-
         }
 
         #endregion
 
         #region GereProg
-
         private void loadListProg()
         {
             getListProg();
@@ -222,7 +209,6 @@ namespace iTasks
             lstListaProgramadores.DisplayMember = "Nome";
             lstListaProgramadores.ValueMember = "Id";
         }
-
         private void getListProg()
         {
             using (var db = new DBContext())
@@ -237,7 +223,6 @@ namespace iTasks
                 }
             }
         }
-
         private void lstListaProgramadores_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstListaProgramadores.SelectedIndex > -1)
@@ -294,7 +279,6 @@ namespace iTasks
 
             return aux;
         }
-
         private void btGravarProg_Click(object sender, EventArgs e)
         {
             if (lstListaProgramadores.SelectedIndex > -1)
@@ -305,43 +289,46 @@ namespace iTasks
                 }
             }
         }
-
         private void savedataProg()
         {
-            using (var db = new DBContext())
+            Programador info = new Programador();
+            info.Id = prog.Id;
+            info.Nome = txtNomeProg.Text;
+            info.Username = txtUsernameProg.Text;
+            info.Password = txtPasswordProg.Text;
+            info.NivelExperiencia = (NivelExperiencia)cbNivelProg.SelectedItem;
+            info.IdGestor = (int)cbGestorProg.SelectedValue;
+            int aux = controller.savedata(info);
+            switch (aux)
             {
-                try
-                {
-                    if (prog is Programador userProg)
-                    {
-                        userProg.Nome = txtNomeProg.Text;
-                        userProg.Username = txtUsernameProg.Text;
-                        userProg.Password = txtPasswordProg.Text;
-                        userProg.NivelExperiencia = (NivelExperiencia)cbNivelProg.SelectedItem;
-                        userProg.IdGestor = (int)cbGestorProg.SelectedValue;
-                        db.Entry(userProg).State = System.Data.Entity.EntityState.Modified;
-                    }
-                    db.SaveChanges();
-                    loadListProg();
+                case 0:
+                    MessageBox.Show("Erro ao gravar utilizador.");
+                    break;
+                case 1:
                     MessageBox.Show("Alterações Guardadas");
-                }
-                catch (Exception e)
+                    loadListProg();
+                    break;
+            }
+        }
+        private void btDeleteProg_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja mesmo eleminar? \nUser selecionado: " + prog.Nome, "Confirmação", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                int aux = controller.deletedata(prog);
+                switch (aux)
                 {
-                    MessageBox.Show("Erro ao gravar utilizador: " + e.Message);
+                    case 0:
+                        MessageBox.Show("Erro ao eliminar utilizador");
+                        break;
+                    case 1:
+                        MessageBox.Show("Utilizador eliminado com sucesso.");
+                        loadListGest();
+                        break;
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
         #endregion
     }
 }

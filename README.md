@@ -5,9 +5,9 @@
 
 frmLogin
 
-frmKanban (falta os ficheiros)
+frmKanban
 
-frmGereUtilizadores (falta por os insert e deletes e updates num controller)
+frmGereUtilizadores
 
 frmGereTipoTarefas
 

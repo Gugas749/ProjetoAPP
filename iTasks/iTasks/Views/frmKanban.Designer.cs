@@ -50,6 +50,7 @@
             this.butReiniciarTarefa = new Guna.UI2.WinForms.Guna2Button();
             this.butTerminarTarefa = new Guna.UI2.WinForms.Guna2Button();
             this.butVerPrevConclusao = new Guna.UI2.WinForms.Guna2Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -310,6 +311,10 @@
             this.butVerPrevConclusao.Text = "Ver Previsão de Conclusão";
             this.butVerPrevConclusao.Click += new System.EventHandler(this.butVerPrevConclusao_Click);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "Tarefas_Feitas";
+            // 
             // frmKanban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -365,5 +370,6 @@
         private Guna.UI2.WinForms.Guna2Button butReiniciarTarefa;
         private Guna.UI2.WinForms.Guna2Button butNovaTarefa;
         private Guna.UI2.WinForms.Guna2Button butVerPrevConclusao;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

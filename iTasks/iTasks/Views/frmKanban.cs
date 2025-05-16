@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,26 +33,7 @@ namespace iTasks
 
         private void frmKanban_Load(object sender, EventArgs e)
         {
-            frmLogin = new frmLogin(this);
-            this.Hide();
-            frmLogin.ShowDialog();
-
-            if(user != null && user.Id != 0)
-            {
-                lbBemVindo.Text = "Bem vindo: "+user.Username.ToString();
-            }
-
-            if (user is Programador programador)
-            {
-                userRole = 1;
-            }
-            else if (user is Gestor gestor)
-            {
-                userRole = 2;
-            }
-
-            enableDisable(userRole);
-            loadLists();
+            loginHandeler();
         }
 
         #region BUTOES
@@ -137,28 +119,41 @@ namespace iTasks
         }
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmLogin.ShowDialog();
-            if (user != null && user.Id != 0)
-            {
-                lbBemVindo.Text = "Bem vindo: " + user.Username.ToString();
-            }
-
-            if (user is Programador programador)
-            {
-                userRole = 1;
-            }
-            else if (user is Gestor gestor)
-            {
-                userRole = 2;
-            }
-
-            enableDisable(userRole);
-            loadLists();
+            loginHandeler();
         }
         private void exportarParaCSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                FileName = "Tarefas",
+                Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*",
+                FilterIndex = 1
+            };
 
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string caminho = saveFileDialog.FileName;
+
+                using (FileStream fs = new FileStream(caminho, FileMode.Create, FileAccess.Write))
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    sw.WriteLine("Id;IdGestor;IdProgramador;OrdemExecucao;Titulo;Descricao;DataPrevistaInicio;DataPrevistaFim;IdTipoTarefa;StoryPoints;DataRealInicio;DataRealFim;DataCriacao;EstadoAtual");
+
+                    foreach (Tarefa tarefa in listDone)
+                    {
+                        sw.WriteLine(
+                            $"{tarefa.Id};{tarefa.IdGestor};{tarefa.IdProgramador};{tarefa.OrdemExecucao};" +
+                            $"{tarefa.Titulo};{tarefa.Descricao};" +
+                            $"{tarefa.DataPrevistaInicio:yyyy-MM-dd};{tarefa.DataPrevistaFim:yyyy-MM-dd};" +
+                            $"{tarefa.IdTipoTarefa};{tarefa.StoryPoints};" +
+                            $"{tarefa.DataRealInicio:yyyy-MM-dd};{tarefa.DataRealFim:yyyy-MM-dd};" +
+                            $"{tarefa.DataCriacao:yyyy-MM-dd};{tarefa.EstadoAtual}"
+                        );
+                    }
+                }
+
+                MessageBox.Show("Exportação foi concluida com sucesso!", "Exportar para CSV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void gerirUtilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -367,6 +362,31 @@ namespace iTasks
             {
                 lstDone.Items.Add(tarefa.ToString());
             }
+        }
+        private void loginHandeler()
+        {
+            frmLogin = new frmLogin(this);
+            this.Hide();
+            frmLogin.ShowDialog();
+            this.Show();
+            this.Focus();
+
+            if (user != null && user.Id != 0)
+            {
+                lbBemVindo.Text = "Bem vindo: " + user.Username.ToString();
+            }
+
+            if (user is Programador programador)
+            {
+                userRole = 1;
+            }
+            else if (user is Gestor gestor)
+            {
+                userRole = 2;
+            }
+
+            enableDisable(userRole);
+            loadLists();
         }
         #endregion
     }

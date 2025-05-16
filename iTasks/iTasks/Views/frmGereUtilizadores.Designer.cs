@@ -279,6 +279,7 @@
             this.btDeleteProg.TabIndex = 45;
             this.btDeleteProg.Text = "Eleminar";
             this.btDeleteProg.UseVisualStyleBackColor = true;
+            this.btDeleteProg.Click += new System.EventHandler(this.btDeleteProg_Click);
             // 
             // label11
             // 
