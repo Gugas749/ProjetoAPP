@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTasks.Controller;
 using iTasks.Model;
 
 namespace iTasks
@@ -15,6 +16,7 @@ namespace iTasks
     {
         frmKanban parent;
         List<TipoTarefa> tiposTarefas = new List<TipoTarefa>();
+        ControllerFrmTiposTarefas controller = new ControllerFrmTiposTarefas();
 
         public frmGereTiposTarefas(frmKanban parent)
         {
@@ -64,20 +66,58 @@ namespace iTasks
         {
             if(txtDesc.Text.Trim().Length > 0)
             {
-                using (var db = new DBContext())
+                TipoTarefa tipoTarefa = new TipoTarefa();
+                tipoTarefa.Nome = txtDesc.Text.Trim();
+                int response = controller.saveData(tipoTarefa);
+                
+                if(response == 1)
                 {
-                    TipoTarefa tipoTarefa = new TipoTarefa();
-                    tipoTarefa.Nome = txtDesc.Text.Trim();
-                    db.TipoTarefas.Add(tipoTarefa);
-                    db.SaveChanges();
-
                     tiposTarefas.Add(tipoTarefa);
                     loadList();
+                }
+                else
+                {
+                    MessageBox.Show("Erro a gravar dados na base de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
                 errorProvider1.SetError(txtDesc, "Este campo é necessario.");
+            }
+        }
+
+        private void butDeleteTipoTarefa_Click(object sender, EventArgs e)
+        {
+            if (lstLista.SelectedIndex >= 0)
+            {
+                string input = lstLista.SelectedItem.ToString();
+                string numberPart = input.Split('-')[0].Trim();
+                int number = int.Parse(numberPart);
+                TipoTarefa aux = new TipoTarefa();
+                foreach(TipoTarefa selected in tiposTarefas)
+                {
+                    if (selected.Id == number)
+                    {
+                        aux = selected;
+                        break;
+                    }
+                }
+
+                int response = controller.deleteData(aux);
+
+                if (response == 1)
+                {
+                    tiposTarefas.Remove(aux);
+                    loadList();
+                }
+                else
+                {
+                    MessageBox.Show("Erro a apagar dados na base de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Porfavor, selecione o tipo de tarefa que deseja apagar.", "Apagar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

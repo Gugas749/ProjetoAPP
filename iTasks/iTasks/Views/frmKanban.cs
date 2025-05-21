@@ -117,7 +117,7 @@ namespace iTasks
         {
 
         }
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loginHandeler();
         }
@@ -157,8 +157,9 @@ namespace iTasks
         }
         private void gerirUtilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGereUtilizadores frm = new frmGereUtilizadores(this);
+            frmGereUtilizadores frm = new frmGereUtilizadores(this, ref user);
             frm.ShowDialog();
+            loadInfosByUser();
         }
         private void gerirTiposDeTarefasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -262,7 +263,7 @@ namespace iTasks
             lstTodo.Enabled = false;
             //----------------------
             ficheiroToolStripMenuItem.Enabled = false;
-            sairToolStripMenuItem.Enabled = false;
+            logoutToolStripMenuItem.Enabled = false;
             exportarParaCSVToolStripMenuItem.Enabled = false;
             //----------------------
             utilizadoresToolStripMenuItem.Enabled = false;
@@ -288,6 +289,7 @@ namespace iTasks
                     listagensToolStripMenuItem.Enabled = true;
                     tarefasTerminadasToolStripMenuItem.Enabled = true;
                     tarefasEmCursoToolStripMenuItem.Enabled = true;
+                    logoutToolStripMenuItem.Enabled = true;
                     //----------------------
                     break;
                 case 2:
@@ -299,12 +301,19 @@ namespace iTasks
                     lstTodo.Enabled = true;
                     //----------------------
                     ficheiroToolStripMenuItem.Enabled = true;
-                    sairToolStripMenuItem.Enabled = true;
+                    logoutToolStripMenuItem.Enabled = true;
                     exportarParaCSVToolStripMenuItem.Enabled = true;
                     //----------------------
                     utilizadoresToolStripMenuItem.Enabled = true;
                     gerirTiposDeTarefasToolStripMenuItem.Enabled = true;
-                    gerirUtilizadoresToolStripMenuItem.Enabled = true;
+                    //gerirUtilizadoresToolStripMenuItem.Enabled = true;
+                    if (user is Gestor gestor)
+                    {
+                        if (gestor.GereUtilizadores)
+                        {
+                            gerirUtilizadoresToolStripMenuItem.Enabled = true;
+                        }
+                    }
                     //----------------------
                     listagensToolStripMenuItem.Enabled = true;
                     tarefasTerminadasToolStripMenuItem.Enabled = true;
@@ -315,6 +324,9 @@ namespace iTasks
         }
         private void loadLists()
         {
+            lstTodo.Items.Clear();
+            lstDoing.Items.Clear();
+            lstDone.Items.Clear();
             using (var db = new DBContext())
             {
                 try
@@ -370,6 +382,14 @@ namespace iTasks
             frmLogin.ShowDialog();
             this.Show();
             this.Focus();
+
+            loadInfosByUser();
+        }
+        private void loadInfosByUser()
+        {
+            listToDo.Clear();
+            listDoing.Clear();
+            listDone.Clear();
 
             if (user != null && user.Id != 0)
             {

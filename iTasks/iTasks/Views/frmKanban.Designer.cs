@@ -36,7 +36,6 @@
             this.lstDone = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ficheiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarParaCSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerirUtilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +43,7 @@
             this.listagensToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarefasTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarefasEmCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbBemVindo = new System.Windows.Forms.Label();
             this.butNovaTarefa = new Guna.UI2.WinForms.Guna2Button();
             this.butExeTarefa = new Guna.UI2.WinForms.Guna2Button();
@@ -135,7 +135,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ficheiroToolStripMenuItem,
             this.utilizadoresToolStripMenuItem,
-            this.listagensToolStripMenuItem});
+            this.listagensToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1257, 28);
@@ -145,18 +146,10 @@
             // ficheiroToolStripMenuItem
             // 
             this.ficheiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem,
             this.exportarParaCSVToolStripMenuItem});
             this.ficheiroToolStripMenuItem.Name = "ficheiroToolStripMenuItem";
             this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.ficheiroToolStripMenuItem.Text = "Ficheiro";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(338, 26);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // exportarParaCSVToolStripMenuItem
             // 
@@ -210,6 +203,13 @@
             this.tarefasEmCursoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.tarefasEmCursoToolStripMenuItem.Text = "Tarefas em Curso";
             this.tarefasEmCursoToolStripMenuItem.Click += new System.EventHandler(this.tarefasEmCursoToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // lbBemVindo
             // 
@@ -356,7 +356,6 @@
         private System.Windows.Forms.ListBox lstDone;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ficheiroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utilizadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerirUtilizadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerirTiposDeTarefasToolStripMenuItem;
@@ -371,5 +370,6 @@
         private Guna.UI2.WinForms.Guna2Button butNovaTarefa;
         private Guna.UI2.WinForms.Guna2Button butVerPrevConclusao;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

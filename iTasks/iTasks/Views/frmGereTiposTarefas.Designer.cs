@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btGravar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.butDeleteTipoTarefa = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -117,11 +118,23 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // butDeleteTipoTarefa
+            // 
+            this.butDeleteTipoTarefa.Location = new System.Drawing.Point(479, 117);
+            this.butDeleteTipoTarefa.Margin = new System.Windows.Forms.Padding(4);
+            this.butDeleteTipoTarefa.Name = "butDeleteTipoTarefa";
+            this.butDeleteTipoTarefa.Size = new System.Drawing.Size(185, 28);
+            this.butDeleteTipoTarefa.TabIndex = 15;
+            this.butDeleteTipoTarefa.Text = "Apagar";
+            this.butDeleteTipoTarefa.UseVisualStyleBackColor = true;
+            this.butDeleteTipoTarefa.Click += new System.EventHandler(this.butDeleteTipoTarefa_Click);
+            // 
             // frmGereTiposTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 497);
+            this.Controls.Add(this.butDeleteTipoTarefa);
             this.Controls.Add(this.btGravar);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.label4);
@@ -149,5 +162,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btGravar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button butDeleteTipoTarefa;
     }
 }

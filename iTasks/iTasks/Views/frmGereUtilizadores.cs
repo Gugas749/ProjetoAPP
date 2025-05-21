@@ -16,6 +16,7 @@ namespace iTasks
     public partial class frmGereUtilizadores : Form
     {
         frmKanban parent;
+        Utilizador currentUser;
         Gestor gestor = new Gestor();
         List<Gestor> listGestor = new List<Gestor>();
 
@@ -24,10 +25,11 @@ namespace iTasks
 
         ControllerFrmGereUtilizadores controller = new ControllerFrmGereUtilizadores();
 
-        public frmGereUtilizadores(frmKanban parent)
+        public frmGereUtilizadores(frmKanban parent, ref Utilizador currentUser)
         {
             InitializeComponent();
             this.parent = parent;
+            this.currentUser = currentUser;
         }
 
         private void frmGereUtilizadores_Load(object sender, EventArgs e)
@@ -170,6 +172,21 @@ namespace iTasks
                 case 1:
                     MessageBox.Show("Alterações Guardadas");
                     loadListGest();
+                    if(currentUser.Id == gestor.Id)
+                    {
+                        if(currentUser is Gestor gestor)
+                        {
+                            currentUser.Nome = info.Nome;
+                            currentUser.Username = info.Username;
+                            currentUser.Password = info.Password;
+                            gestor.Departamento = info.Departamento;
+                            gestor.GereUtilizadores = info.GereUtilizadores;
+                            if (gestor.GereUtilizadores != true)
+                            {
+                                this.Close();
+                            }
+                        }
+                    }
                     break;
             }
         }

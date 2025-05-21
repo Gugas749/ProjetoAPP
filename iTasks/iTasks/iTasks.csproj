@@ -63,6 +63,7 @@
     <Compile Include="Controller\ControllerDetalhesTarefa.cs" />
     <Compile Include="Controller\ControllerFrmGereUtilizadores .cs" />
     <Compile Include="Controller\ControllerFrmKanban.cs" />
+    <Compile Include="Controller\ControllerFrmTiposTarefas.cs" />
     <Compile Include="Model\DBContext.cs" />
     <Compile Include="Model\Enum.cs" />
     <Compile Include="Model\Gestor.cs" />
