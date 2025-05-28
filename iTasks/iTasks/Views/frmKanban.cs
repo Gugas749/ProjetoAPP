@@ -40,7 +40,7 @@ namespace iTasks
         private void butNovaTarefa_Click(object sender, EventArgs e)
         {
             Tarefa tarefa = new Tarefa();
-            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
+            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa, 0);
             frm.ShowDialog();
             loadLists();
         }
@@ -69,23 +69,23 @@ namespace iTasks
         }
         private void butReiniciarTarefa_Click(object sender, EventArgs e)
         {
-            if(lstDone.SelectedIndex >= 0 && lstDone.SelectedIndex != null)
+            if(lstDoing.SelectedIndex >= 0 && lstDoing.SelectedIndex != null)
             {
-                string selected = lstDone.SelectedItem.ToString();
+                string selected = lstDoing.SelectedItem.ToString();
                 string numberPart = selected.Split('-')[0].Trim();
                 if (!numberPart.Equals("") && !numberPart.Equals(" "))
                 {
                     int idAux = Convert.ToInt32(numberPart);
-                    Tarefa aux = controller.updateTarefa(idAux, EstadoAtual.Doing);
+                    Tarefa aux = controller.updateTarefa(idAux, EstadoAtual.ToDo);
                     foreach (Tarefa tarefa in listDone)
                     {
                         if (tarefa.Id == idAux)
                         {
-                            listDone.Remove(tarefa);
+                            listToDo.Remove(tarefa);
                             break;
                         }
                     }
-                    listDoing.Add(aux);
+                    listToDo.Add(aux);
                 }
                 updateLists();
             }
@@ -115,7 +115,26 @@ namespace iTasks
         }
         private void butVerPrevConclusao_Click(object sender, EventArgs e)
         {
-
+            if (lstTodo.SelectedIndex >= 0 && lstTodo.SelectedIndex != null)
+            {
+                string selected = lstTodo.SelectedItem.ToString();
+                string numberPart = selected.Split('-')[0].Trim();
+                int StoryPoints = 0;
+                foreach(Tarefa tarefa in listToDo)
+                {
+                    if (tarefa.Id == Convert.ToInt32(numberPart))
+                    {
+                        StoryPoints = tarefa.StoryPoints;
+                        break;
+                    }
+                }
+                Diversao diversao = new Diversao();
+                double totalSeconds = diversao.previsao(listDone, StoryPoints);
+                int hours = (int)(totalSeconds / 3600);
+                int minutes = (int)((totalSeconds % 3600) / 60);
+                int seconds = (int)(totalSeconds % 60);
+                MessageBox.Show($"Tempo previsto: {hours}h {minutes}m {seconds}s");
+            }
         }
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -189,7 +208,7 @@ namespace iTasks
                     {
                         if (tarefa.Id == idAux)
                         {
-                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
+                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa, 1);
                             frm.ShowDialog();
                             updateLists();
                             break;
@@ -211,7 +230,7 @@ namespace iTasks
                     {
                         if (tarefa.Id == idAux)
                         {
-                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
+                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa, 1);
                             frm.ShowDialog();
                             updateLists();
                             break;
@@ -233,7 +252,7 @@ namespace iTasks
                     {
                         if (tarefa.Id == idAux)
                         {
-                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa);
+                            frmDetalhesTarefa frm = new frmDetalhesTarefa(user, this, userRole, tarefa, 1);
                             frm.ShowDialog();
                             updateLists();
                             break;

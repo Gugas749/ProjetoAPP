@@ -55,11 +55,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.butGravar = new System.Windows.Forms.Button();
             this.butFechar = new System.Windows.Forms.Button();
-            this.txtStoryPoints = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.cbStoryPoints = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,7 +159,7 @@
             // 
             // dtInicio
             // 
-            this.dtInicio.Location = new System.Drawing.Point(176, 343);
+            this.dtInicio.Location = new System.Drawing.Point(175, 346);
             this.dtInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtInicio.Name = "dtInicio";
             this.dtInicio.Size = new System.Drawing.Size(265, 22);
@@ -168,7 +168,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 347);
+            this.label6.Location = new System.Drawing.Point(8, 350);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 16);
@@ -178,7 +178,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 380);
+            this.label7.Location = new System.Drawing.Point(23, 383);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 16);
@@ -187,7 +187,7 @@
             // 
             // dtFim
             // 
-            this.dtFim.Location = new System.Drawing.Point(176, 375);
+            this.dtFim.Location = new System.Drawing.Point(175, 378);
             this.dtFim.Margin = new System.Windows.Forms.Padding(4);
             this.dtFim.Name = "dtFim";
             this.dtFim.Size = new System.Drawing.Size(265, 22);
@@ -289,7 +289,7 @@
             // 
             // butGravar
             // 
-            this.butGravar.Location = new System.Drawing.Point(421, 428);
+            this.butGravar.Location = new System.Drawing.Point(421, 421);
             this.butGravar.Margin = new System.Windows.Forms.Padding(4);
             this.butGravar.Name = "butGravar";
             this.butGravar.Size = new System.Drawing.Size(188, 28);
@@ -300,7 +300,7 @@
             // 
             // butFechar
             // 
-            this.butFechar.Location = new System.Drawing.Point(617, 428);
+            this.butFechar.Location = new System.Drawing.Point(617, 421);
             this.butFechar.Margin = new System.Windows.Forms.Padding(4);
             this.butFechar.Name = "butFechar";
             this.butFechar.Size = new System.Drawing.Size(139, 28);
@@ -309,19 +309,10 @@
             this.butFechar.UseVisualStyleBackColor = true;
             this.butFechar.Click += new System.EventHandler(this.butFechar_Click);
             // 
-            // txtStoryPoints
-            // 
-            this.txtStoryPoints.Location = new System.Drawing.Point(176, 306);
-            this.txtStoryPoints.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStoryPoints.Name = "txtStoryPoints";
-            this.txtStoryPoints.Size = new System.Drawing.Size(81, 22);
-            this.txtStoryPoints.TabIndex = 5;
-            this.txtStoryPoints.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStoryPoints_KeyPress);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(84, 310);
+            this.label12.Location = new System.Drawing.Point(80, 313);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 16);
@@ -350,14 +341,37 @@
             this.label13.TabIndex = 32;
             this.label13.Text = "Título da Tarefa:";
             // 
+            // cbStoryPoints
+            // 
+            this.cbStoryPoints.BackColor = System.Drawing.Color.Transparent;
+            this.cbStoryPoints.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStoryPoints.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStoryPoints.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStoryPoints.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStoryPoints.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbStoryPoints.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStoryPoints.ItemHeight = 30;
+            this.cbStoryPoints.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "5",
+            "8",
+            "13",
+            "21"});
+            this.cbStoryPoints.Location = new System.Drawing.Point(176, 303);
+            this.cbStoryPoints.Name = "cbStoryPoints";
+            this.cbStoryPoints.Size = new System.Drawing.Size(137, 36);
+            this.cbStoryPoints.TabIndex = 33;
+            // 
             // frmDetalhesTarefa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 498);
+            this.Controls.Add(this.cbStoryPoints);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtStoryPoints);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.butFechar);
             this.Controls.Add(this.butGravar);
@@ -423,10 +437,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button butGravar;
         private System.Windows.Forms.Button butFechar;
-        private System.Windows.Forms.TextBox txtStoryPoints;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStoryPoints;
     }
 }

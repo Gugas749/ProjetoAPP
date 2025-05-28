@@ -22,7 +22,14 @@ namespace iTasks.Controller
                         existingTarefa = ta;
                     }
                 }
-
+                if(estado == EstadoAtual.Done)
+                {
+                    existingTarefa.DataRealFim = DateTime.Now;
+                }
+                else if(estado == EstadoAtual.Doing)
+                {
+                    existingTarefa.DataRealInicio = DateTime.Now;
+                }
                 if (existingTarefa != null)
                 {
                     existingTarefa.EstadoAtual = estado;

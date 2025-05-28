@@ -64,6 +64,7 @@
     <Compile Include="Controller\ControllerFrmGereUtilizadores .cs" />
     <Compile Include="Controller\ControllerFrmKanban.cs" />
     <Compile Include="Controller\ControllerFrmTiposTarefas.cs" />
+    <Compile Include="Diversao.cs" />
     <Compile Include="Model\DBContext.cs" />
     <Compile Include="Model\Enum.cs" />
     <Compile Include="Model\Gestor.cs" />

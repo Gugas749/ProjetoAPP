@@ -17,26 +17,35 @@ namespace iTasks
     {
         ControllerDetalhesTarefa controller = new ControllerDetalhesTarefa();
         Utilizador user = new Utilizador();
-        int userRole = 0;
+        int userRole = 0, viewMode = 0;
         bool changedSomething = false;
         List<Programador> listProgramadors = new List<Programador>();
         List<TipoTarefa> listTiposTarefas = new List<TipoTarefa>();
         Tarefa tarefaRecebida = new Tarefa();
         frmKanban parent;
 
-        public frmDetalhesTarefa(Utilizador user, frmKanban parent, int userRole, Tarefa tarefa)
+        public frmDetalhesTarefa(Utilizador user, frmKanban parent, int userRole, Tarefa tarefa, int viewMode)
         {
             InitializeComponent();
             this.user = user;
             this.parent = parent;
             this.userRole = userRole;
             this.tarefaRecebida = tarefa;
+            this.viewMode = viewMode;
         }
 
         private void frmDetalhesTarefa_Load(object sender, EventArgs e)
         {
             enableDisable(userRole);
-            loadInfos();
+            switch (viewMode)
+            {
+                case 0:
+                    loadInfos();
+                    break;
+                case 1:
+                    viewModeDetalhes();
+                    break;
+            }
         }
 
         private void butFechar_Click(object sender, EventArgs e)
@@ -89,7 +98,7 @@ namespace iTasks
             //----------------------
             txtTitulo.Enabled = false;
             txtDesc.Enabled = false;
-            txtStoryPoints.Enabled = false;
+            cbStoryPoints.Enabled = false;
             txtOrdem.Enabled = false;
             txtId.Enabled = false;
             txtEstado.Enabled = false;
@@ -112,7 +121,7 @@ namespace iTasks
                     //----------------------
                     txtTitulo.Enabled = true;
                     txtDesc.Enabled = true;
-                    txtStoryPoints.Enabled = true;
+                    cbStoryPoints.Enabled = true;
                     txtOrdem.Enabled = true;
                     //----------------------
                     comboBoxTipoTarefa.Enabled = true;
@@ -135,7 +144,7 @@ namespace iTasks
             tarefa.DataPrevistaInicio = dtInicio.Value;
             tarefa.DataPrevistaFim = dtFim.Value;
             tarefa.IdTipoTarefa = listTiposTarefas[comboBoxTipoTarefa.SelectedIndex].Id;
-            tarefa.StoryPoints = Convert.ToInt32(txtStoryPoints.Text.Trim());
+            tarefa.StoryPoints = Convert.ToInt32(cbStoryPoints.SelectedItem.ToString());
             tarefa.DataRealInicio = DateTime.Now;
             tarefa.DataRealFim = DateTime.Now;
             tarefa.DataCriacao = DateTime.Now;
@@ -180,10 +189,10 @@ namespace iTasks
                 errorProvider1.SetError(txtOrdem, "Este campo é necessario.");
             }
 
-            if (txtStoryPoints.Text.Trim().Length <= 0)
+            if (cbStoryPoints.Text.Trim().Length <= 0)
             {
                 aux = false;
-                errorProvider1.SetError(txtStoryPoints, "Este campo é necessario.");
+                errorProvider1.SetError(cbStoryPoints, "Este campo é necessario.");
             }
 
             return aux;
@@ -252,7 +261,30 @@ namespace iTasks
                 txtdataRealFim.Text = tarefaRecebida.DataRealFim.ToString();
                 txtDesc.Text = tarefaRecebida.Descricao.ToString();
                 txtOrdem.Text = tarefaRecebida.OrdemExecucao.ToString();
-                txtStoryPoints.Text = tarefaRecebida.StoryPoints.ToString();
+                switch (tarefaRecebida.StoryPoints)
+                {
+                    case 1:
+                        cbStoryPoints.SelectedIndex = 0;
+                        break;
+                    case 2:
+                        cbStoryPoints.SelectedIndex = 1;
+                        break;
+                    case 3:
+                        cbStoryPoints.SelectedIndex = 2;
+                        break;
+                    case 5:
+                        cbStoryPoints.SelectedIndex = 3;
+                        break;
+                    case 8:
+                        cbStoryPoints.SelectedIndex = 4;
+                        break;
+                    case 13:
+                        cbStoryPoints.SelectedIndex = 5;
+                        break;
+                    case 25:
+                        cbStoryPoints.SelectedIndex = 6;
+                        break;
+                }
                 dtInicio.Value = tarefaRecebida.DataPrevistaInicio;
                 dtFim.Value = tarefaRecebida.DataPrevistaFim;
 
@@ -299,10 +331,68 @@ namespace iTasks
             comboBoxProgramador.SelectedItem = null;
             comboBoxTipoTarefa.SelectedItem = null;
             txtOrdem.Text = "";
-            txtStoryPoints.Text = "";
+            cbStoryPoints.SelectedItem = null;
             dtInicio.Value = DateTime.Now;
             dtFim.Value = DateTime.Now;
         }
+        private void viewModeDetalhes()
+        {
+            butGravar.Enabled = false;
+            //----------------------
+            txtTitulo.Enabled = false;
+            txtDesc.Enabled = false;
+            cbStoryPoints.Enabled = false;
+            txtOrdem.Enabled = false;
+            txtId.Enabled = false;
+            txtEstado.Enabled = false;
+            txtDataCriacao.Enabled = false;
+            txtDataRealini.Enabled = false;
+            txtdataRealFim.Enabled = false;
+            //----------------------
+            comboBoxTipoTarefa.Enabled = false;
+            comboBoxProgramador.Enabled = false;
+            //----------------------
+            dtInicio.Enabled = false;
+            dtFim.Enabled = false;
+            //----------------------
+
+            txtId.Text = tarefaRecebida.Id.ToString();
+            txtEstado.Text = tarefaRecebida.EstadoAtual.ToString();
+            txtDataRealini.Text = tarefaRecebida.DataRealInicio.ToString();
+            txtDataCriacao.Text = tarefaRecebida.DataCriacao.ToString();
+            txtdataRealFim.Text = tarefaRecebida.DataRealFim.ToString();
+            txtTitulo.Text = tarefaRecebida.Titulo.ToString();
+            txtDesc.Text = tarefaRecebida.Descricao.ToString();
+            txtOrdem.Text = tarefaRecebida.OrdemExecucao.ToString();
+            cbStoryPoints.Text = tarefaRecebida.StoryPoints.ToString();
+            dtInicio.Text = tarefaRecebida.DataPrevistaInicio.ToString();
+            dtFim.Text = tarefaRecebida.DataPrevistaFim.ToString();
+
+            using (var db = new DBContext())
+            {
+                List<TipoTarefa> tiposTarefa = db.TipoTarefas.ToList();
+                foreach (TipoTarefa tipo in tiposTarefa)
+                {
+                    if (tipo.Id == tarefaRecebida.IdTipoTarefa)
+                    {
+                        comboBoxTipoTarefa.Text = tipo.Id + " - " + tipo.Nome;
+                    }
+                }
+
+                List<Utilizador> users = db.Utilizadores.ToList();
+                foreach (Utilizador selectedUser in users)
+                {
+                    if (selectedUser is Programador programador)
+                    {
+                        if (programador.Id == tarefaRecebida.IdProgramador)
+                        {
+                            comboBoxProgramador.Text = programador.Username + " - " + programador.Nome;
+                        }
+                    }
+                }
+            }
+        }
         #endregion
+
     }
 }
