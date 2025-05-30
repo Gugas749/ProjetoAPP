@@ -18,5 +18,54 @@ namespace iTasks.Controller
                 db.SaveChanges();
             }
         }
+
+        public List<Utilizador> GetUtilizadores()
+        {
+            List<Utilizador> users = new List<Utilizador>();
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    users = db.Utilizadores.ToList();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+            return users;
+        }
+        public List<TipoTarefa> GetTipoTarefas()
+        {
+            List<TipoTarefa> users = new List<TipoTarefa>();
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    users = db.TipoTarefas.ToList();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+            return users;
+        }
+        public List<Tarefa> GetTarefas()
+        {
+            List<Tarefa> users = new List<Tarefa>();
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    users = db.Tarefas.ToList();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+            return users;
+        }
     }
 }

@@ -48,5 +48,21 @@ namespace iTasks.Controller
 
             return response;
         }
+        public List<TipoTarefa> GetTipoTarefas()
+        {
+            List<TipoTarefa> tiposTarefas = new List<TipoTarefa>();
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    tiposTarefas = db.TipoTarefas.ToList();
+                }
+                catch
+                {
+
+                }
+            }
+            return tiposTarefas;
+        }
     }
 }

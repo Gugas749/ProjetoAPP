@@ -28,31 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btFechar = new System.Windows.Forms.Button();
             this.gvTarefasConcluidas = new System.Windows.Forms.DataGridView();
+            this.btFechar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvTarefasConcluidas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btFechar
-            // 
-            this.btFechar.Location = new System.Drawing.Point(1245, 511);
-            this.btFechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btFechar.Name = "btFechar";
-            this.btFechar.Size = new System.Drawing.Size(139, 28);
-            this.btFechar.TabIndex = 32;
-            this.btFechar.Text = "Fechar";
-            this.btFechar.UseVisualStyleBackColor = true;
-            this.btFechar.Click += new System.EventHandler(this.btFechar_Click);
             // 
             // gvTarefasConcluidas
             // 
             this.gvTarefasConcluidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvTarefasConcluidas.Location = new System.Drawing.Point(16, 15);
-            this.gvTarefasConcluidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gvTarefasConcluidas.Margin = new System.Windows.Forms.Padding(4);
             this.gvTarefasConcluidas.Name = "gvTarefasConcluidas";
             this.gvTarefasConcluidas.RowHeadersWidth = 51;
             this.gvTarefasConcluidas.Size = new System.Drawing.Size(1368, 486);
             this.gvTarefasConcluidas.TabIndex = 31;
+            // 
+            // btFechar
+            // 
+            this.btFechar.BorderRadius = 7;
+            this.btFechar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btFechar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btFechar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btFechar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btFechar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.btFechar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btFechar.ForeColor = System.Drawing.Color.White;
+            this.btFechar.IndicateFocus = true;
+            this.btFechar.Location = new System.Drawing.Point(1245, 514);
+            this.btFechar.Name = "btFechar";
+            this.btFechar.Size = new System.Drawing.Size(139, 28);
+            this.btFechar.TabIndex = 47;
+            this.btFechar.Text = "Fechar";
             // 
             // frmConsultarTarefasConcluidas
             // 
@@ -61,7 +67,7 @@
             this.ClientSize = new System.Drawing.Size(1403, 554);
             this.Controls.Add(this.btFechar);
             this.Controls.Add(this.gvTarefasConcluidas);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConsultarTarefasConcluidas";
             this.Text = "frmConsultarTarefasConcluidas";
             this.Load += new System.EventHandler(this.frmConsultarTarefasConcluidas_Load);
@@ -71,8 +77,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btFechar;
         private System.Windows.Forms.DataGridView gvTarefasConcluidas;
+        private Guna.UI2.WinForms.Guna2Button btFechar;
     }
 }

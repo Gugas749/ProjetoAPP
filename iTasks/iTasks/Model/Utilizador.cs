@@ -6,9 +6,9 @@ namespace iTasks.Model
     {
         [Key]
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string Nome { get; set; } //Encrypted
+        public string Username { get; set; } //Encrypted
+        public string Password { get; set; } //Encrypted
 
         //public Utilizador(string nome, string username, string password)
         //{

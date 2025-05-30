@@ -54,40 +54,18 @@ namespace iTasks
         }
         private void getListUsers()
         {
-            using (var db = new DBContext())
-            {
-                try
-                {
-                    var gestores = db.Utilizadores
-                        .OfType<Gestor>()
-                        .ToList();
+            listGestor = controller.GetGestors();
 
-                    listGestor = gestores;
+            cbGestorProg.DataSource = null;
+            // Cria uma outra list pra nao ter os id´s associados e nao dar conflito com a listbox do gestor
+            cbGestorProg.DataSource = listGestor.Select(g => new {
+                Id = g.Id,
+                Nome = g.Nome
+            }).ToList();
 
-                    //
-                    // ComboBox Programador (Gestor associado)
-                    //
-
-                    // Esta versão fica associado a listbox do gestor
-                    //cbGestorProg.DataSource = gestores;
-
-
-                    cbGestorProg.DataSource = null;
-                    // Cria uma outra list pra nao ter os id´s associados e nao dar conflito com a listbox do gestor
-                    cbGestorProg.DataSource = gestores.Select(g => new {
-                        Id = g.Id,
-                        Nome = g.Nome
-                    }).ToList();
-
-                    cbGestorProg.DisplayMember = "Nome";
-                    cbGestorProg.ValueMember = "Id";
-                    cbGestorProg.SelectedIndex = -1;
-                }
-                catch (Exception er)
-                {
-                    MessageBox.Show("eero" + er);
-                }
-            }
+            cbGestorProg.DisplayMember = "Nome";
+            cbGestorProg.ValueMember = "Id";
+            cbGestorProg.SelectedIndex = -1;
         }
         private void lstListaGestores_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -158,9 +136,9 @@ namespace iTasks
         {
             Gestor info = new Gestor();
             info.Id = gestor.Id;
-            info.Nome = txtNomeGestor.Text;
-            info.Username = txtUsernameGestor.Text;
-            info.Password = txtPasswordGestor.Text;
+            info.Nome = CaesarCipher.Encrypt(txtNomeGestor.Text, 10);
+            info.Username = CaesarCipher.Encrypt(txtUsernameGestor.Text, 10);
+            info.Password = CaesarCipher.Encrypt(txtPasswordGestor.Text, 10);
             info.Departamento = (Departamento)cbDepartamento.SelectedItem;
             info.GereUtilizadores = chkGereUtilizadores.Checked;
             int aux = controller.savedata(info);
@@ -228,17 +206,7 @@ namespace iTasks
         }
         private void getListProg()
         {
-            using (var db = new DBContext())
-            {
-                try
-                {
-                    listProg = db.Programadores.ToList();
-                }
-                catch
-                {
-
-                }
-            }
+            listProg = controller.GetProgramadores();
         }
         private void lstListaProgramadores_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -310,9 +278,9 @@ namespace iTasks
         {
             Programador info = new Programador();
             info.Id = prog.Id;
-            info.Nome = txtNomeProg.Text;
-            info.Username = txtUsernameProg.Text;
-            info.Password = txtPasswordProg.Text;
+            info.Nome = CaesarCipher.Encrypt(txtNomeProg.Text, 10);
+            info.Username = CaesarCipher.Encrypt(txtUsernameProg.Text, 10);
+            info.Password = CaesarCipher.Encrypt(txtPasswordProg.Text, 10);
             info.NivelExperiencia = (NivelExperiencia)cbNivelProg.SelectedItem;
             info.IdGestor = (int)cbGestorProg.SelectedValue;
             int aux = controller.savedata(info);

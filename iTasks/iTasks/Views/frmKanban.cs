@@ -346,33 +346,24 @@ namespace iTasks
             lstTodo.Items.Clear();
             lstDoing.Items.Clear();
             lstDone.Items.Clear();
-            using (var db = new DBContext())
+            
+            List<Tarefa> tarefas = controller.GetTarefas();
+            foreach (Tarefa selected in tarefas)
             {
-                try
+                switch (selected.EstadoAtual)
                 {
-                    List<Tarefa> tarefas = db.Tarefas.ToList();
-                    foreach (Tarefa selected in tarefas)
-                    {
-                        switch (selected.EstadoAtual)
-                        {
-                            case EstadoAtual.ToDo:
-                                listToDo.Add(selected);
-                                lstTodo.Items.Add(selected.ToString());
-                                break;
-                            case EstadoAtual.Doing:
-                                listDoing.Add(selected);
-                                lstDoing.Items.Add(selected.ToString());
-                                break;
-                            case EstadoAtual.Done:
-                                listDone.Add(selected);
-                                lstDone.Items.Add(selected.ToString());
-                                break;
-                        }
-                    }
-                }
-                catch
-                {
-
+                    case EstadoAtual.ToDo:
+                        listToDo.Add(selected);
+                        lstTodo.Items.Add(selected.ToString());
+                        break;
+                    case EstadoAtual.Doing:
+                        listDoing.Add(selected);
+                        lstDoing.Items.Add(selected.ToString());
+                        break;
+                    case EstadoAtual.Done:
+                        listDone.Add(selected);
+                        lstDone.Items.Add(selected.ToString());
+                        break;
                 }
             }
         }

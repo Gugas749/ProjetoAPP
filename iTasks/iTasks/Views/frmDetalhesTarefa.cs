@@ -48,6 +48,7 @@ namespace iTasks
             }
         }
 
+        #region Butoes e txts
         private void butFechar_Click(object sender, EventArgs e)
         {
             if(changedSomething)
@@ -66,7 +67,6 @@ namespace iTasks
                 this.Close();
             }
         }
-
         private void butGravar_Click(object sender, EventArgs e)
         {
             if(allFieldsFilled())
@@ -74,7 +74,6 @@ namespace iTasks
                 saveData();
             }
         }
-
         private void txtStoryPoints_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -82,7 +81,6 @@ namespace iTasks
                 e.Handled = true;
             }
         }
-
         private void txtOrdem_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -90,6 +88,7 @@ namespace iTasks
                 e.Handled = true;
             }
         }
+        #endregion
 
         #region FUNCOES
         private void enableDisable(int role)
@@ -206,49 +205,39 @@ namespace iTasks
                 txtDataRealini.Text = "Indisponivel";
                 txtdataRealFim.Text = "Indisponivel";
 
-                using (var db = new DBContext())
+                List<Utilizador> users = controller.GetUtilizadores();
+                foreach (Utilizador selectedUser in users)
                 {
-                    try
+                    if (selectedUser is Programador programador)
                     {
-                        List<Utilizador> users = db.Utilizadores.ToList();
-                        foreach (Utilizador selectedUser in users)
+                        if (programador.IdGestor == user.Id)
                         {
-                            if (selectedUser is Programador programador)
-                            {
-                                if (programador.IdGestor == user.Id)
-                                {
-                                    listProgramadors.Add(programador);
-                                    comboBoxProgramador.Items.Add(programador.Username + " - " + programador.Nome);
-                                }
-                            }
+                            listProgramadors.Add(programador);
+                            comboBoxProgramador.Items.Add(programador.Username + " - " + programador.Nome);
                         }
-
-                        List<TipoTarefa> tiposTarefas = db.TipoTarefas.ToList();
-                        foreach (TipoTarefa tipoTarefa in tiposTarefas)
-                        {
-                            listTiposTarefas.Add(tipoTarefa);
-                            comboBoxTipoTarefa.Items.Add(tipoTarefa.Nome);
-                        }
-
-                        List<Tarefa> tarefas = db.Tarefas.ToList();
-                        int aux = 0;
-                        foreach (Tarefa tarefa in tarefas)
-                        {
-                            if (tarefa.Id > aux)
-                            {
-                                aux = tarefa.Id;
-                            }
-                        }
-
-                        aux++;
-
-                        txtId.Text = aux.ToString();
-                    }
-                    catch
-                    {
-
                     }
                 }
+
+                List<TipoTarefa> tiposTarefas = controller.GetTipoTarefas();
+                foreach (TipoTarefa tipoTarefa in tiposTarefas)
+                {
+                    listTiposTarefas.Add(tipoTarefa);
+                    comboBoxTipoTarefa.Items.Add(tipoTarefa.Nome);
+                }
+
+                List<Tarefa> tarefas = controller.GetTarefas();
+                int aux = 0;
+                foreach (Tarefa tarefa in tarefas)
+                {
+                    if (tarefa.Id > aux)
+                    {
+                        aux = tarefa.Id;
+                    }
+                }
+
+                aux++;
+
+                txtId.Text = aux.ToString();
             }
             else
             { // prog
@@ -288,34 +277,24 @@ namespace iTasks
                 dtInicio.Value = tarefaRecebida.DataPrevistaInicio;
                 dtFim.Value = tarefaRecebida.DataPrevistaFim;
 
-                using (var db = new DBContext())
+                List<Utilizador> users = controller.GetUtilizadores();
+                foreach (Utilizador selectedUser in users)
                 {
-                    try
+                    if (selectedUser is Programador programador)
                     {
-                        List<Utilizador> users = db.Utilizadores.ToList();
-                        foreach (Utilizador selectedUser in users)
+                        if (programador.Id == tarefaRecebida.IdProgramador)
                         {
-                            if (selectedUser is Programador programador)
-                            {
-                                if (programador.Id == tarefaRecebida.IdProgramador)
-                                {
-                                    comboBoxProgramador.Text = programador.Username + " - " + programador.Nome;
-                                }
-                            }
-                        }
-
-                        List<TipoTarefa> tiposTarefas = db.TipoTarefas.ToList();
-                        foreach (TipoTarefa tipoTarefa in tiposTarefas)
-                        {
-                            if(tipoTarefa.Id == tarefaRecebida.IdTipoTarefa)
-                            {
-                                comboBoxTipoTarefa.Text = tipoTarefa.Id + " - " + tipoTarefa.Nome;
-                            }
+                            comboBoxProgramador.Text = programador.Username + " - " + programador.Nome;
                         }
                     }
-                    catch
-                    {
+                }
 
+                List<TipoTarefa> tiposTarefas = controller.GetTipoTarefas();
+                foreach (TipoTarefa tipoTarefa in tiposTarefas)
+                {
+                    if (tipoTarefa.Id == tarefaRecebida.IdTipoTarefa)
+                    {
+                        comboBoxTipoTarefa.Text = tipoTarefa.Id + " - " + tipoTarefa.Nome;
                     }
                 }
             }
@@ -368,26 +347,23 @@ namespace iTasks
             dtInicio.Text = tarefaRecebida.DataPrevistaInicio.ToString();
             dtFim.Text = tarefaRecebida.DataPrevistaFim.ToString();
 
-            using (var db = new DBContext())
+            List<TipoTarefa> tiposTarefa = controller.GetTipoTarefas();
+            foreach (TipoTarefa tipo in tiposTarefa)
             {
-                List<TipoTarefa> tiposTarefa = db.TipoTarefas.ToList();
-                foreach (TipoTarefa tipo in tiposTarefa)
+                if (tipo.Id == tarefaRecebida.IdTipoTarefa)
                 {
-                    if (tipo.Id == tarefaRecebida.IdTipoTarefa)
-                    {
-                        comboBoxTipoTarefa.Text = tipo.Id + " - " + tipo.Nome;
-                    }
+                    comboBoxTipoTarefa.Text = tipo.Id + " - " + tipo.Nome;
                 }
+            }
 
-                List<Utilizador> users = db.Utilizadores.ToList();
-                foreach (Utilizador selectedUser in users)
+            List<Utilizador> users = controller.GetUtilizadores();
+            foreach (Utilizador selectedUser in users)
+            {
+                if (selectedUser is Programador programador)
                 {
-                    if (selectedUser is Programador programador)
+                    if (programador.Id == tarefaRecebida.IdProgramador)
                     {
-                        if (programador.Id == tarefaRecebida.IdProgramador)
-                        {
-                            comboBoxProgramador.Text = programador.Username + " - " + programador.Nome;
-                        }
+                        comboBoxProgramador.Text = programador.Username + " - " + programador.Nome;
                     }
                 }
             }

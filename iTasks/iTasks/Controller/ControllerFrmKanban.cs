@@ -39,5 +39,22 @@ namespace iTasks.Controller
 
             return existingTarefa;
         }
+
+        public List<Tarefa> GetTarefas()
+        {
+            List < Tarefa > tarefas = new List < Tarefa >();
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    tarefas = db.Tarefas.ToList();                  
+                }
+                catch
+                {
+
+                }
+            }
+            return tarefas;
+        }
     }
 }

@@ -29,7 +29,6 @@ namespace iTasks.Controller
 
             return aux;
         }
-
         public int deletedata(Utilizador utilizador)
         {
             int aux = 0;
@@ -47,6 +46,40 @@ namespace iTasks.Controller
                 }
             }
             return aux;
+        }
+        public List<Gestor> GetGestors()
+        {
+            List<Gestor> gestores = new List<Gestor>();
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    gestores = db.Utilizadores.OfType<Gestor>().ToList();
+                }
+                catch (Exception er)
+                {
+                    MessageBox.Show("eero" + er);
+                }
+            }
+
+            return gestores;
+        }
+        public List<Programador> GetProgramadores()
+        {
+            List<Programador> progs = new List<Programador>();
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    progs = db.Utilizadores.OfType<Programador>().ToList();
+                }
+                catch (Exception er)
+                {
+                    MessageBox.Show("eero" + er);
+                }
+            }
+
+            return progs;
         }
     }
 }

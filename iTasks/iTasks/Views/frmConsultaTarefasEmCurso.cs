@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTasks.Controller;
 using iTasks.Model;
 
 namespace iTasks
 {
     public partial class frmConsultaTarefasEmCurso : Form
     {
+        ControllerFrmsConsultar controller = new ControllerFrmsConsultar();
         public frmConsultaTarefasEmCurso()
         {
             InitializeComponent();
@@ -30,26 +32,16 @@ namespace iTasks
 
         private void loadList()
         {
-            using (var db = new DBContext())
+            List<Tarefa> tarefas = controller.GetTarefas();
+            List<Tarefa> aux = new List<Tarefa>();
+            foreach (Tarefa selected in tarefas)
             {
-                try
+                if (selected.EstadoAtual == EstadoAtual.Doing)
                 {
-                    List<Tarefa> tarefas = db.Tarefas.ToList();
-                    List<Tarefa> aux = new List<Tarefa>();
-                    foreach (Tarefa selected in tarefas)
-                    {
-                        if (selected.EstadoAtual == EstadoAtual.Doing)
-                        {
-                            aux.Add(selected);
-                        }
-                    }
-                    gvTarefasEmCurso.DataSource = aux;
-                }
-                catch
-                {
-
+                    aux.Add(selected);
                 }
             }
+            gvTarefasEmCurso.DataSource = aux;
         }
     }
 }

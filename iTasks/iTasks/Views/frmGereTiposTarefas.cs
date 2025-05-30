@@ -32,17 +32,7 @@ namespace iTasks
 
         private void getListTiposTarefas()
         {
-            using (var db = new DBContext())
-            {
-                try
-                {
-                    tiposTarefas = db.TipoTarefas.ToList();
-                }
-                catch
-                {
-
-                }
-            }
+            tiposTarefas = controller.GetTipoTarefas();
         }
 
         private void loadList()

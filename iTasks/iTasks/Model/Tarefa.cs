@@ -15,8 +15,8 @@ namespace iTasks.Model
         public int IdGestor { get; set; } // FOREIGN KEY -> Gestor -> Utilizador(Id)
         public int IdProgramador { get; set; } // FOREIGN KEY -> Programador -> Utilizador(Id)
         public int OrdemExecucao { get; set; }
-        public string Titulo { get; set; }
-        public string Descricao { get; set; }
+        public string Titulo { get; set; } //Encrypted
+        public string Descricao { get; set; } //Encrypted
         public DateTime DataPrevistaInicio { get; set; }
         public DateTime DataPrevistaFim { get; set; }
         public int IdTipoTarefa { get; set; } // FOREIGN KEY -> TipoTarefa -> TipoTarefa(Id)
