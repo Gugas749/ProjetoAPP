@@ -38,7 +38,10 @@ namespace iTasks
             {
                 if (selected.EstadoAtual == EstadoAtual.Doing)
                 {
-                    aux.Add(selected);
+                    Tarefa KRL = selected;
+                    KRL.Descricao = CaesarCipher.Decrypt(selected.Descricao, 10);
+                    KRL.Titulo = CaesarCipher.Decrypt(selected.Titulo, 10);
+                    aux.Add(KRL);
                 }
             }
             gvTarefasEmCurso.DataSource = aux;

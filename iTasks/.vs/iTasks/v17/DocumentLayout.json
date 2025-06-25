@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmconsultatarefasemcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmconsultatarefasemcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmconsultatarefasemcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmconsultatarefasemcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmconsultartarefasconcluidas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmconsultartarefasconcluidas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\model\\tarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\model\\tarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmdetalhestarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,20 +54,96 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmConsultaTarefasEmCurso.cs",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmConsultaTarefasEmCurso.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmConsultaTarefasEmCurso.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmConsultaTarefasEmCurso.cs",
+              "RelativeToolTip": "iTasks\\Views\\frmConsultaTarefasEmCurso.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwCUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T22:50:21.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmConsultaTarefasEmCurso.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmConsultaTarefasEmCurso.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmConsultaTarefasEmCurso.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmConsultaTarefasEmCurso.cs [Design]",
+              "RelativeToolTip": "iTasks\\Views\\frmConsultaTarefasEmCurso.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T22:50:20.534Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmConsultarTarefasConcluidas.cs",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmConsultarTarefasConcluidas.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmConsultarTarefasConcluidas.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmConsultarTarefasConcluidas.cs",
+              "RelativeToolTip": "iTasks\\Views\\frmConsultarTarefasConcluidas.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowCAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T22:47:50.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tarefa.cs",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Model\\Tarefa.cs",
+              "RelativeDocumentMoniker": "iTasks\\Model\\Tarefa.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Model\\Tarefa.cs",
+              "RelativeToolTip": "iTasks\\Model\\Tarefa.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T22:46:42.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmKanban.cs",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmKanban.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
+              "RelativeToolTip": "iTasks\\Views\\frmKanban.cs",
+              "ViewState": "AgIAAA8BAAAAAAAAAAA2wGIBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T22:46:19.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmKanban.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
+              "RelativeDocumentMoniker": "iTasks\\Views\\frmKanban.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs [Design]",
+              "RelativeToolTip": "iTasks\\Views\\frmKanban.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T22:46:17.927Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "frmDetalhesTarefa.cs",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmDetalhesTarefa.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\frmDetalhesTarefa.cs",
               "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmDetalhesTarefa.cs",
               "RelativeToolTip": "iTasks\\Views\\frmDetalhesTarefa.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAswN4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAiwNIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T22:42:06.174Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "frmDetalhesTarefa.cs [Design]",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmDetalhesTarefa.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\frmDetalhesTarefa.cs",

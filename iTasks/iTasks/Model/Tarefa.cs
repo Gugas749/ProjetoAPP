@@ -28,7 +28,7 @@ namespace iTasks.Model
 
         public override string ToString()
         {
-            return $"{Id} - {Titulo}";
+            return $"{Id} - {CaesarCipher.Decrypt(Titulo, 10)}";
         }
     }
 }
