@@ -41,7 +41,7 @@ namespace iTasks
             int aux = 0;
             foreach (TipoTarefa item in tiposTarefas)
             {
-                lstLista.Items.Add(item.Id + " - "+ item.Nome);
+                lstLista.Items.Add(item.Id + " - "+ CaesarCipher.Decrypt(item.Nome, 10));
                 if (item.Id > aux)
                 {
                     aux = item.Id;
@@ -57,7 +57,7 @@ namespace iTasks
             if(txtDesc.Text.Trim().Length > 0)
             {
                 TipoTarefa tipoTarefa = new TipoTarefa();
-                tipoTarefa.Nome = txtDesc.Text.Trim();
+                tipoTarefa.Nome = CaesarCipher.Encrypt(txtDesc.Text.Trim(), 10);
                 int response = controller.saveData(tipoTarefa);
                 
                 if(response == 1)

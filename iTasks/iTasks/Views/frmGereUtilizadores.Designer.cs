@@ -34,35 +34,35 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstListaGestores = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkGereUtilizadores = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbDepartamento = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtIdGestor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPasswordGestor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUsernameGestor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtNomeGestor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lstListaProgramadores = new System.Windows.Forms.ListBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btDeleteGestor = new Guna.UI2.WinForms.Guna2Button();
             this.btGravarGestor = new Guna.UI2.WinForms.Guna2Button();
-            this.btDeleteProg = new Guna.UI2.WinForms.Guna2Button();
-            this.btGravarProg = new Guna.UI2.WinForms.Guna2Button();
-            this.txtNomeGestor = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUsernameGestor = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPasswordGestor = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIdGestor = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbDepartamento = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.chkGereUtilizadores = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbGestorProg = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbNivelProg = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtIdProg = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtPasswordProg = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsernameProg = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtNomeProg = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.cbNivelProg = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbGestorProg = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lstListaProgramadores = new System.Windows.Forms.ListBox();
+            this.btDeleteProg = new Guna.UI2.WinForms.Guna2Button();
+            this.btGravarProg = new Guna.UI2.WinForms.Guna2Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -139,6 +139,102 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gestores";
             // 
+            // chkGereUtilizadores
+            // 
+            this.chkGereUtilizadores.AutoSize = true;
+            this.chkGereUtilizadores.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkGereUtilizadores.CheckedState.BorderRadius = 0;
+            this.chkGereUtilizadores.CheckedState.BorderThickness = 0;
+            this.chkGereUtilizadores.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkGereUtilizadores.Location = new System.Drawing.Point(391, 299);
+            this.chkGereUtilizadores.Name = "chkGereUtilizadores";
+            this.chkGereUtilizadores.Size = new System.Drawing.Size(133, 20);
+            this.chkGereUtilizadores.TabIndex = 52;
+            this.chkGereUtilizadores.Text = "Gere Utilizadores";
+            this.chkGereUtilizadores.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkGereUtilizadores.UncheckedState.BorderRadius = 0;
+            this.chkGereUtilizadores.UncheckedState.BorderThickness = 0;
+            this.chkGereUtilizadores.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // cbDepartamento
+            // 
+            this.cbDepartamento.BackColor = System.Drawing.Color.Transparent;
+            this.cbDepartamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDepartamento.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDepartamento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDepartamento.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbDepartamento.ItemHeight = 30;
+            this.cbDepartamento.Location = new System.Drawing.Point(391, 255);
+            this.cbDepartamento.Name = "cbDepartamento";
+            this.cbDepartamento.Size = new System.Drawing.Size(265, 36);
+            this.cbDepartamento.TabIndex = 51;
+            // 
+            // txtIdGestor
+            // 
+            this.txtIdGestor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(118)))), ((int)(((byte)(132)))));
+            this.txtIdGestor.BorderRadius = 7;
+            this.txtIdGestor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdGestor.DefaultText = "";
+            this.txtIdGestor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdGestor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdGestor.Enabled = false;
+            this.txtIdGestor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdGestor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdGestor.Location = new System.Drawing.Point(391, 45);
+            this.txtIdGestor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdGestor.Name = "txtIdGestor";
+            this.txtIdGestor.PlaceholderText = "Id";
+            this.txtIdGestor.SelectedText = "";
+            this.txtIdGestor.Size = new System.Drawing.Size(134, 30);
+            this.txtIdGestor.TabIndex = 50;
+            // 
+            // txtPasswordGestor
+            // 
+            this.txtPasswordGestor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(118)))), ((int)(((byte)(132)))));
+            this.txtPasswordGestor.BorderRadius = 7;
+            this.txtPasswordGestor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPasswordGestor.DefaultText = "";
+            this.txtPasswordGestor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPasswordGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPasswordGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPasswordGestor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPasswordGestor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPasswordGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPasswordGestor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPasswordGestor.Location = new System.Drawing.Point(391, 202);
+            this.txtPasswordGestor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPasswordGestor.Name = "txtPasswordGestor";
+            this.txtPasswordGestor.PlaceholderText = "Password";
+            this.txtPasswordGestor.SelectedText = "";
+            this.txtPasswordGestor.Size = new System.Drawing.Size(266, 30);
+            this.txtPasswordGestor.TabIndex = 49;
+            // 
+            // txtUsernameGestor
+            // 
+            this.txtUsernameGestor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(118)))), ((int)(((byte)(132)))));
+            this.txtUsernameGestor.BorderRadius = 7;
+            this.txtUsernameGestor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsernameGestor.DefaultText = "";
+            this.txtUsernameGestor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsernameGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsernameGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsernameGestor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsernameGestor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsernameGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsernameGestor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsernameGestor.Location = new System.Drawing.Point(391, 149);
+            this.txtUsernameGestor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsernameGestor.Name = "txtUsernameGestor";
+            this.txtUsernameGestor.PlaceholderText = "Username";
+            this.txtUsernameGestor.SelectedText = "";
+            this.txtUsernameGestor.Size = new System.Drawing.Size(266, 30);
+            this.txtUsernameGestor.TabIndex = 48;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -148,6 +244,27 @@
             this.label5.Size = new System.Drawing.Size(96, 16);
             this.label5.TabIndex = 42;
             this.label5.Text = "Departamento:";
+            // 
+            // txtNomeGestor
+            // 
+            this.txtNomeGestor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(118)))), ((int)(((byte)(132)))));
+            this.txtNomeGestor.BorderRadius = 7;
+            this.txtNomeGestor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNomeGestor.DefaultText = "";
+            this.txtNomeGestor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNomeGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNomeGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNomeGestor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNomeGestor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNomeGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNomeGestor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNomeGestor.Location = new System.Drawing.Point(391, 97);
+            this.txtNomeGestor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNomeGestor.Name = "txtNomeGestor";
+            this.txtNomeGestor.PlaceholderText = "Nome";
+            this.txtNomeGestor.SelectedText = "";
+            this.txtNomeGestor.Size = new System.Drawing.Size(266, 30);
+            this.txtNomeGestor.TabIndex = 47;
             // 
             // label3
             // 
@@ -168,6 +285,42 @@
             this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 37;
             this.label2.Text = "Username:";
+            // 
+            // btDeleteGestor
+            // 
+            this.btDeleteGestor.BorderRadius = 7;
+            this.btDeleteGestor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDeleteGestor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDeleteGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDeleteGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDeleteGestor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.btDeleteGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btDeleteGestor.ForeColor = System.Drawing.Color.White;
+            this.btDeleteGestor.IndicateFocus = true;
+            this.btDeleteGestor.Location = new System.Drawing.Point(390, 360);
+            this.btDeleteGestor.Name = "btDeleteGestor";
+            this.btDeleteGestor.Size = new System.Drawing.Size(267, 28);
+            this.btDeleteGestor.TabIndex = 45;
+            this.btDeleteGestor.Text = "Eleminar";
+            this.btDeleteGestor.Click += new System.EventHandler(this.btDeleteProg_Click);
+            // 
+            // btGravarGestor
+            // 
+            this.btGravarGestor.BorderRadius = 7;
+            this.btGravarGestor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btGravarGestor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btGravarGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btGravarGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btGravarGestor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.btGravarGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btGravarGestor.ForeColor = System.Drawing.Color.White;
+            this.btGravarGestor.IndicateFocus = true;
+            this.btGravarGestor.Location = new System.Drawing.Point(390, 325);
+            this.btGravarGestor.Name = "btGravarGestor";
+            this.btGravarGestor.Size = new System.Drawing.Size(267, 28);
+            this.btGravarGestor.TabIndex = 46;
+            this.btGravarGestor.Text = "Gravar Dados";
+            this.btGravarGestor.Click += new System.EventHandler(this.btGravarGestor_Click);
             // 
             // groupBox3
             // 
@@ -195,238 +348,35 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Programadores";
             // 
-            // label11
+            // cbGestorProg
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(390, 294);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 16);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "Gestor:";
+            this.cbGestorProg.BackColor = System.Drawing.Color.Transparent;
+            this.cbGestorProg.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbGestorProg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGestorProg.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbGestorProg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbGestorProg.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbGestorProg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbGestorProg.ItemHeight = 30;
+            this.cbGestorProg.Location = new System.Drawing.Point(392, 313);
+            this.cbGestorProg.Name = "cbGestorProg";
+            this.cbGestorProg.Size = new System.Drawing.Size(267, 36);
+            this.cbGestorProg.TabIndex = 61;
             // 
-            // label6
+            // cbNivelProg
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(390, 236);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 16);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "Nível de Experiência:";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.lstListaProgramadores);
-            this.groupBox4.Location = new System.Drawing.Point(8, 23);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(365, 560);
-            this.groupBox4.TabIndex = 32;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Lista";
-            // 
-            // lstListaProgramadores
-            // 
-            this.lstListaProgramadores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstListaProgramadores.FormattingEnabled = true;
-            this.lstListaProgramadores.ItemHeight = 16;
-            this.lstListaProgramadores.Location = new System.Drawing.Point(4, 19);
-            this.lstListaProgramadores.Margin = new System.Windows.Forms.Padding(4);
-            this.lstListaProgramadores.Name = "lstListaProgramadores";
-            this.lstListaProgramadores.Size = new System.Drawing.Size(357, 537);
-            this.lstListaProgramadores.TabIndex = 0;
-            this.lstListaProgramadores.SelectedIndexChanged += new System.EventHandler(this.lstListaProgramadores_SelectedIndexChanged);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // btDeleteGestor
-            // 
-            this.btDeleteGestor.BorderRadius = 7;
-            this.btDeleteGestor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btDeleteGestor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btDeleteGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btDeleteGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btDeleteGestor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.btDeleteGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btDeleteGestor.ForeColor = System.Drawing.Color.White;
-            this.btDeleteGestor.IndicateFocus = true;
-            this.btDeleteGestor.Location = new System.Drawing.Point(390, 360);
-            this.btDeleteGestor.Name = "btDeleteGestor";
-            this.btDeleteGestor.Size = new System.Drawing.Size(267, 28);
-            this.btDeleteGestor.TabIndex = 45;
-            this.btDeleteGestor.Text = "Eleminar";
-            // 
-            // btGravarGestor
-            // 
-            this.btGravarGestor.BorderRadius = 7;
-            this.btGravarGestor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btGravarGestor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btGravarGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btGravarGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btGravarGestor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.btGravarGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btGravarGestor.ForeColor = System.Drawing.Color.White;
-            this.btGravarGestor.IndicateFocus = true;
-            this.btGravarGestor.Location = new System.Drawing.Point(390, 325);
-            this.btGravarGestor.Name = "btGravarGestor";
-            this.btGravarGestor.Size = new System.Drawing.Size(267, 28);
-            this.btGravarGestor.TabIndex = 46;
-            this.btGravarGestor.Text = "Gravar Dados";
-            // 
-            // btDeleteProg
-            // 
-            this.btDeleteProg.BorderRadius = 7;
-            this.btDeleteProg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btDeleteProg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btDeleteProg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btDeleteProg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btDeleteProg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.btDeleteProg.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btDeleteProg.ForeColor = System.Drawing.Color.White;
-            this.btDeleteProg.IndicateFocus = true;
-            this.btDeleteProg.Location = new System.Drawing.Point(393, 389);
-            this.btDeleteProg.Name = "btDeleteProg";
-            this.btDeleteProg.Size = new System.Drawing.Size(267, 28);
-            this.btDeleteProg.TabIndex = 47;
-            this.btDeleteProg.Text = "Eleminar";
-            // 
-            // btGravarProg
-            // 
-            this.btGravarProg.BorderRadius = 7;
-            this.btGravarProg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btGravarProg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btGravarProg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btGravarProg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btGravarProg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.btGravarProg.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btGravarProg.ForeColor = System.Drawing.Color.White;
-            this.btGravarProg.IndicateFocus = true;
-            this.btGravarProg.Location = new System.Drawing.Point(393, 354);
-            this.btGravarProg.Name = "btGravarProg";
-            this.btGravarProg.Size = new System.Drawing.Size(267, 28);
-            this.btGravarProg.TabIndex = 48;
-            this.btGravarProg.Text = "Gravar Dados";
-            // 
-            // txtNomeGestor
-            // 
-            this.txtNomeGestor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(118)))), ((int)(((byte)(132)))));
-            this.txtNomeGestor.BorderRadius = 7;
-            this.txtNomeGestor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNomeGestor.DefaultText = "";
-            this.txtNomeGestor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNomeGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNomeGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNomeGestor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNomeGestor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomeGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNomeGestor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomeGestor.Location = new System.Drawing.Point(391, 97);
-            this.txtNomeGestor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNomeGestor.Name = "txtNomeGestor";
-            this.txtNomeGestor.PlaceholderText = "Nome";
-            this.txtNomeGestor.SelectedText = "";
-            this.txtNomeGestor.Size = new System.Drawing.Size(266, 30);
-            this.txtNomeGestor.TabIndex = 47;
-            // 
-            // txtUsernameGestor
-            // 
-            this.txtUsernameGestor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(118)))), ((int)(((byte)(132)))));
-            this.txtUsernameGestor.BorderRadius = 7;
-            this.txtUsernameGestor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsernameGestor.DefaultText = "";
-            this.txtUsernameGestor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsernameGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsernameGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsernameGestor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsernameGestor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsernameGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsernameGestor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsernameGestor.Location = new System.Drawing.Point(391, 149);
-            this.txtUsernameGestor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUsernameGestor.Name = "txtUsernameGestor";
-            this.txtUsernameGestor.PlaceholderText = "Username";
-            this.txtUsernameGestor.SelectedText = "";
-            this.txtUsernameGestor.Size = new System.Drawing.Size(266, 30);
-            this.txtUsernameGestor.TabIndex = 48;
-            // 
-            // txtPasswordGestor
-            // 
-            this.txtPasswordGestor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(118)))), ((int)(((byte)(132)))));
-            this.txtPasswordGestor.BorderRadius = 7;
-            this.txtPasswordGestor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPasswordGestor.DefaultText = "";
-            this.txtPasswordGestor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPasswordGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPasswordGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPasswordGestor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPasswordGestor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPasswordGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPasswordGestor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPasswordGestor.Location = new System.Drawing.Point(391, 202);
-            this.txtPasswordGestor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPasswordGestor.Name = "txtPasswordGestor";
-            this.txtPasswordGestor.PlaceholderText = "Password";
-            this.txtPasswordGestor.SelectedText = "";
-            this.txtPasswordGestor.Size = new System.Drawing.Size(266, 30);
-            this.txtPasswordGestor.TabIndex = 49;
-            // 
-            // txtIdGestor
-            // 
-            this.txtIdGestor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(118)))), ((int)(((byte)(132)))));
-            this.txtIdGestor.BorderRadius = 7;
-            this.txtIdGestor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdGestor.DefaultText = "";
-            this.txtIdGestor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdGestor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdGestor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdGestor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdGestor.Enabled = false;
-            this.txtIdGestor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdGestor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdGestor.Location = new System.Drawing.Point(391, 45);
-            this.txtIdGestor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtIdGestor.Name = "txtIdGestor";
-            this.txtIdGestor.PlaceholderText = "Id";
-            this.txtIdGestor.SelectedText = "";
-            this.txtIdGestor.Size = new System.Drawing.Size(134, 30);
-            this.txtIdGestor.TabIndex = 50;
-            // 
-            // cbDepartamento
-            // 
-            this.cbDepartamento.BackColor = System.Drawing.Color.Transparent;
-            this.cbDepartamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDepartamento.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbDepartamento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbDepartamento.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbDepartamento.ItemHeight = 30;
-            this.cbDepartamento.Location = new System.Drawing.Point(391, 255);
-            this.cbDepartamento.Name = "cbDepartamento";
-            this.cbDepartamento.Size = new System.Drawing.Size(265, 36);
-            this.cbDepartamento.TabIndex = 51;
-            // 
-            // chkGereUtilizadores
-            // 
-            this.chkGereUtilizadores.AutoSize = true;
-            this.chkGereUtilizadores.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkGereUtilizadores.CheckedState.BorderRadius = 0;
-            this.chkGereUtilizadores.CheckedState.BorderThickness = 0;
-            this.chkGereUtilizadores.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkGereUtilizadores.Location = new System.Drawing.Point(391, 299);
-            this.chkGereUtilizadores.Name = "chkGereUtilizadores";
-            this.chkGereUtilizadores.Size = new System.Drawing.Size(133, 20);
-            this.chkGereUtilizadores.TabIndex = 52;
-            this.chkGereUtilizadores.Text = "Gere Utilizadores";
-            this.chkGereUtilizadores.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chkGereUtilizadores.UncheckedState.BorderRadius = 0;
-            this.chkGereUtilizadores.UncheckedState.BorderThickness = 0;
-            this.chkGereUtilizadores.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbNivelProg.BackColor = System.Drawing.Color.Transparent;
+            this.cbNivelProg.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbNivelProg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNivelProg.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNivelProg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNivelProg.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbNivelProg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNivelProg.ItemHeight = 30;
+            this.cbNivelProg.Location = new System.Drawing.Point(392, 255);
+            this.cbNivelProg.Name = "cbNivelProg";
+            this.cbNivelProg.Size = new System.Drawing.Size(267, 36);
+            this.cbNivelProg.TabIndex = 53;
             // 
             // txtIdProg
             // 
@@ -449,6 +399,16 @@
             this.txtIdProg.SelectedText = "";
             this.txtIdProg.Size = new System.Drawing.Size(134, 30);
             this.txtIdProg.TabIndex = 60;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(390, 294);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 16);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "Gestor:";
             // 
             // txtPasswordProg
             // 
@@ -491,6 +451,16 @@
             this.txtUsernameProg.SelectedText = "";
             this.txtUsernameProg.Size = new System.Drawing.Size(266, 30);
             this.txtUsernameProg.TabIndex = 58;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(390, 236);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 16);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Nível de Experiência:";
             // 
             // txtNomeProg
             // 
@@ -553,35 +523,69 @@
             this.label15.TabIndex = 54;
             this.label15.Text = "Nome:";
             // 
-            // cbNivelProg
+            // groupBox4
             // 
-            this.cbNivelProg.BackColor = System.Drawing.Color.Transparent;
-            this.cbNivelProg.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbNivelProg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNivelProg.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbNivelProg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbNivelProg.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbNivelProg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbNivelProg.ItemHeight = 30;
-            this.cbNivelProg.Location = new System.Drawing.Point(392, 255);
-            this.cbNivelProg.Name = "cbNivelProg";
-            this.cbNivelProg.Size = new System.Drawing.Size(267, 36);
-            this.cbNivelProg.TabIndex = 53;
+            this.groupBox4.Controls.Add(this.lstListaProgramadores);
+            this.groupBox4.Location = new System.Drawing.Point(8, 23);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(365, 560);
+            this.groupBox4.TabIndex = 32;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Lista";
             // 
-            // cbGestorProg
+            // lstListaProgramadores
             // 
-            this.cbGestorProg.BackColor = System.Drawing.Color.Transparent;
-            this.cbGestorProg.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbGestorProg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGestorProg.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGestorProg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGestorProg.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbGestorProg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbGestorProg.ItemHeight = 30;
-            this.cbGestorProg.Location = new System.Drawing.Point(392, 313);
-            this.cbGestorProg.Name = "cbGestorProg";
-            this.cbGestorProg.Size = new System.Drawing.Size(267, 36);
-            this.cbGestorProg.TabIndex = 61;
+            this.lstListaProgramadores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstListaProgramadores.FormattingEnabled = true;
+            this.lstListaProgramadores.ItemHeight = 16;
+            this.lstListaProgramadores.Location = new System.Drawing.Point(4, 19);
+            this.lstListaProgramadores.Margin = new System.Windows.Forms.Padding(4);
+            this.lstListaProgramadores.Name = "lstListaProgramadores";
+            this.lstListaProgramadores.Size = new System.Drawing.Size(357, 537);
+            this.lstListaProgramadores.TabIndex = 0;
+            this.lstListaProgramadores.SelectedIndexChanged += new System.EventHandler(this.lstListaProgramadores_SelectedIndexChanged);
+            // 
+            // btDeleteProg
+            // 
+            this.btDeleteProg.BorderRadius = 7;
+            this.btDeleteProg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDeleteProg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDeleteProg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDeleteProg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDeleteProg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.btDeleteProg.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btDeleteProg.ForeColor = System.Drawing.Color.White;
+            this.btDeleteProg.IndicateFocus = true;
+            this.btDeleteProg.Location = new System.Drawing.Point(393, 389);
+            this.btDeleteProg.Name = "btDeleteProg";
+            this.btDeleteProg.Size = new System.Drawing.Size(267, 28);
+            this.btDeleteProg.TabIndex = 47;
+            this.btDeleteProg.Text = "Eleminar";
+            this.btDeleteProg.Click += new System.EventHandler(this.btDeleteProg_Click);
+            // 
+            // btGravarProg
+            // 
+            this.btGravarProg.BorderRadius = 7;
+            this.btGravarProg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btGravarProg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btGravarProg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btGravarProg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btGravarProg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.btGravarProg.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btGravarProg.ForeColor = System.Drawing.Color.White;
+            this.btGravarProg.IndicateFocus = true;
+            this.btGravarProg.Location = new System.Drawing.Point(393, 354);
+            this.btGravarProg.Name = "btGravarProg";
+            this.btGravarProg.Size = new System.Drawing.Size(267, 28);
+            this.btGravarProg.TabIndex = 48;
+            this.btGravarProg.Text = "Gravar Dados";
+            this.btGravarProg.Click += new System.EventHandler(this.btGravarProg_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmGereUtilizadores
             // 

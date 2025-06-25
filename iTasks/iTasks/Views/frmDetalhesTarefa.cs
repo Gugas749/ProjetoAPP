@@ -135,11 +135,11 @@ namespace iTasks
         private void saveData()
         {
             Tarefa tarefa = new Tarefa();
-            tarefa.Titulo = txtTitulo.Text.Trim();
+            tarefa.Titulo = CaesarCipher.Encrypt(txtTitulo.Text.Trim(), 10);
             tarefa.IdGestor = user.Id;
             tarefa.IdProgramador = listProgramadors[comboBoxProgramador.SelectedIndex].Id;
             tarefa.OrdemExecucao = Convert.ToInt32(txtOrdem.Text.Trim());
-            tarefa.Descricao = txtDesc.Text.Trim();
+            tarefa.Descricao = CaesarCipher.Encrypt(txtDesc.Text.Trim(), 10);
             tarefa.DataPrevistaInicio = dtInicio.Value;
             tarefa.DataPrevistaFim = dtFim.Value;
             tarefa.IdTipoTarefa = listTiposTarefas[comboBoxTipoTarefa.SelectedIndex].Id;
@@ -213,7 +213,7 @@ namespace iTasks
                         if (programador.IdGestor == user.Id)
                         {
                             listProgramadors.Add(programador);
-                            comboBoxProgramador.Items.Add(programador.Username + " - " + programador.Nome);
+                            comboBoxProgramador.Items.Add(CaesarCipher.Decrypt(programador.Username, 10) + " - " + CaesarCipher.Decrypt(programador.Nome, 10));
                         }
                     }
                 }
@@ -222,7 +222,7 @@ namespace iTasks
                 foreach (TipoTarefa tipoTarefa in tiposTarefas)
                 {
                     listTiposTarefas.Add(tipoTarefa);
-                    comboBoxTipoTarefa.Items.Add(tipoTarefa.Nome);
+                    comboBoxTipoTarefa.Items.Add(CaesarCipher.Decrypt(tipoTarefa.Nome, 10));
                 }
 
                 List<Tarefa> tarefas = controller.GetTarefas();
@@ -242,13 +242,13 @@ namespace iTasks
             else
             { // prog
 
-                txtTitulo.Text = tarefaRecebida.Titulo.ToString();
+                txtTitulo.Text = CaesarCipher.Decrypt(tarefaRecebida.Titulo.ToString(), 10);
                 txtId.Text = tarefaRecebida.Id.ToString();
                 txtEstado.Text = tarefaRecebida.EstadoAtual.ToString();
                 txtDataCriacao.Text = tarefaRecebida.DataCriacao.ToString();
                 txtDataRealini.Text = tarefaRecebida.DataRealInicio.ToString();
                 txtdataRealFim.Text = tarefaRecebida.DataRealFim.ToString();
-                txtDesc.Text = tarefaRecebida.Descricao.ToString();
+                txtDesc.Text = CaesarCipher.Decrypt(tarefaRecebida.Descricao.ToString(), 10);
                 txtOrdem.Text = tarefaRecebida.OrdemExecucao.ToString();
                 switch (tarefaRecebida.StoryPoints)
                 {

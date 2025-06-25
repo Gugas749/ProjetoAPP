@@ -28,6 +28,37 @@ namespace iTasks
         private void frmLogin_Load(object sender, EventArgs e)
         {
             controller = new ControllerFrmLogin();
+
+            using (var db = new DBContext())
+            {
+                Gestor user = new Gestor();
+                user.Nome = CaesarCipher.Encrypt("Padre", 10);
+                user.Username = CaesarCipher.Encrypt("gest1", 10);
+                user.Password = CaesarCipher.Encrypt("1", 10);
+                user.GereUtilizadores = true;
+                user.Departamento = Departamento.Administracao;
+                db.Utilizadores.Add(user);
+                db.SaveChanges();
+            }
+
+            using (var db = new DBContext())
+            {
+                var gestor = db.Utilizadores.OfType<Gestor>().FirstOrDefault(g => g.Username == "gest1");
+
+                if (gestor != null)
+                {
+                    Programador prog = new Programador();
+                    prog.Nome = CaesarCipher.Encrypt("prog1", 10);
+                    prog.Username = CaesarCipher.Encrypt("prog1", 10);
+                    prog.Password = CaesarCipher.Encrypt("1", 10);
+                    prog.NivelExperiencia = NivelExperiencia.Junior;
+                    prog.IdGestor = gestor.Id;
+                    prog.Gestor = gestor;
+
+                    db.Utilizadores.Add(prog);
+                    db.SaveChanges();
+                }
+            }
         }
 
         private void butLogin_Click(object sender, EventArgs e)
