@@ -60,7 +60,7 @@ namespace iTasks
             // Cria uma outra list pra nao ter os id´s associados e nao dar conflito com a listbox do gestor
             cbGestorProg.DataSource = listGestor.Select(g => new {
                 Id = g.Id,
-                Nome = CaesarCipher.Decrypt(g.Nome, 10)
+                Nome = g.Nome
             }).ToList();
 
             cbGestorProg.DisplayMember = "Nome";
@@ -165,6 +165,26 @@ namespace iTasks
                             }
                         }
                     }
+                    break;
+            }
+        }
+        private void adddataGest()
+        {
+            Gestor info = new Gestor();
+            info.Nome = CaesarCipher.Encrypt(txtNomeGestor.Text, 10);
+            info.Username = CaesarCipher.Encrypt(txtUsernameGestor.Text, 10);
+            info.Password = CaesarCipher.Encrypt(txtPasswordGestor.Text, 10);
+            info.Departamento = (Departamento)cbDepartamento.SelectedItem;
+            info.GereUtilizadores = chkGereUtilizadores.Checked;
+            int aux = controller.createdata(info);
+            switch (aux)
+            {
+                case 0:
+                    MessageBox.Show("Erro ao gravar utilizador.");
+                    break;
+                case 1:
+                    MessageBox.Show("Alterações Guardadas");
+                    loadListGest();
                     break;
             }
         }
@@ -295,6 +315,26 @@ namespace iTasks
                     break;
             }
         }
+        private void adddataProg()
+        {
+            Programador info = new Programador();
+            info.Nome = CaesarCipher.Encrypt(txtNomeProg.Text, 10);
+            info.Username = CaesarCipher.Encrypt(txtUsernameProg.Text, 10);
+            info.Password = CaesarCipher.Encrypt(txtPasswordProg.Text, 10);
+            info.NivelExperiencia = (NivelExperiencia)cbNivelProg.SelectedItem;
+            info.IdGestor = (int)cbGestorProg.SelectedValue;
+            int aux = controller.createdata(info);
+            switch (aux)
+            {
+                case 0:
+                    MessageBox.Show("Erro ao gravar utilizador.");
+                    break;
+                case 1:
+                    MessageBox.Show("Alterações Guardadas");
+                    loadListProg();
+                    break;
+            }
+        }
         private void btDeleteProg_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Deseja mesmo eleminar? \nUser selecionado: " + prog.Nome, "Confirmação", MessageBoxButtons.YesNo);
@@ -315,5 +355,21 @@ namespace iTasks
             }
         }
         #endregion
+
+        private void btAddGest_Click(object sender, EventArgs e)
+        {
+            if (allFieldsFilledGest())
+            {
+                adddataGest();
+            }
+        }
+
+        private void btAddProg_Click(object sender, EventArgs e)
+        {
+            if (allFieldsFilledProg())
+            {
+                adddataProg();
+            }
+        }
     }
 }

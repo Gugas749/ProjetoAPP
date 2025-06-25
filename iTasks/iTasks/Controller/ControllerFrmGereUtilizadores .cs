@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -95,6 +96,27 @@ namespace iTasks.Controller
             }
 
             return progs;
+        }
+
+        public int createdata(Utilizador info)
+        {
+            int aux = 0;
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    db.Utilizadores.Add(info); // ou db.Set<Utilizador>().Add(info);
+                    db.SaveChanges();
+                    aux = 1;
+                }
+                catch (Exception e)
+                {
+                    // Podes registar o erro se quiseres:
+                    // Console.WriteLine(e.Message);
+                }
+            }
+
+            return aux;
         }
     }
 }

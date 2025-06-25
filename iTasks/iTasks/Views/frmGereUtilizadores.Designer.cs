@@ -34,6 +34,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstListaGestores = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btAddGest = new Guna.UI2.WinForms.Guna2Button();
             this.chkGereUtilizadores = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cbDepartamento = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtIdGestor = new Guna.UI2.WinForms.Guna2TextBox();
@@ -46,6 +47,7 @@
             this.btDeleteGestor = new Guna.UI2.WinForms.Guna2Button();
             this.btGravarGestor = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btAddProg = new Guna.UI2.WinForms.Guna2Button();
             this.cbGestorProg = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbNivelProg = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtIdProg = new Guna.UI2.WinForms.Guna2TextBox();
@@ -116,6 +118,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btAddGest);
             this.groupBox2.Controls.Add(this.chkGereUtilizadores);
             this.groupBox2.Controls.Add(this.cbDepartamento);
             this.groupBox2.Controls.Add(this.txtIdGestor);
@@ -139,6 +142,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gestores";
             // 
+            // btAddGest
+            // 
+            this.btAddGest.BorderRadius = 7;
+            this.btAddGest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btAddGest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btAddGest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btAddGest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btAddGest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.btAddGest.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btAddGest.ForeColor = System.Drawing.Color.White;
+            this.btAddGest.IndicateFocus = true;
+            this.btAddGest.Location = new System.Drawing.Point(389, 409);
+            this.btAddGest.Name = "btAddGest";
+            this.btAddGest.Size = new System.Drawing.Size(267, 28);
+            this.btAddGest.TabIndex = 53;
+            this.btAddGest.Text = "Adicionar Dados";
+            this.btAddGest.Click += new System.EventHandler(this.btAddGest_Click);
+            // 
             // chkGereUtilizadores
             // 
             this.chkGereUtilizadores.AutoSize = true;
@@ -146,7 +167,7 @@
             this.chkGereUtilizadores.CheckedState.BorderRadius = 0;
             this.chkGereUtilizadores.CheckedState.BorderThickness = 0;
             this.chkGereUtilizadores.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkGereUtilizadores.Location = new System.Drawing.Point(391, 299);
+            this.chkGereUtilizadores.Location = new System.Drawing.Point(391, 307);
             this.chkGereUtilizadores.Name = "chkGereUtilizadores";
             this.chkGereUtilizadores.Size = new System.Drawing.Size(133, 20);
             this.chkGereUtilizadores.TabIndex = 52;
@@ -297,7 +318,7 @@
             this.btDeleteGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btDeleteGestor.ForeColor = System.Drawing.Color.White;
             this.btDeleteGestor.IndicateFocus = true;
-            this.btDeleteGestor.Location = new System.Drawing.Point(390, 360);
+            this.btDeleteGestor.Location = new System.Drawing.Point(390, 374);
             this.btDeleteGestor.Name = "btDeleteGestor";
             this.btDeleteGestor.Size = new System.Drawing.Size(267, 28);
             this.btDeleteGestor.TabIndex = 45;
@@ -315,7 +336,7 @@
             this.btGravarGestor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btGravarGestor.ForeColor = System.Drawing.Color.White;
             this.btGravarGestor.IndicateFocus = true;
-            this.btGravarGestor.Location = new System.Drawing.Point(390, 325);
+            this.btGravarGestor.Location = new System.Drawing.Point(390, 339);
             this.btGravarGestor.Name = "btGravarGestor";
             this.btGravarGestor.Size = new System.Drawing.Size(267, 28);
             this.btGravarGestor.TabIndex = 46;
@@ -324,6 +345,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btAddProg);
             this.groupBox3.Controls.Add(this.cbGestorProg);
             this.groupBox3.Controls.Add(this.cbNivelProg);
             this.groupBox3.Controls.Add(this.txtIdProg);
@@ -348,6 +370,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Programadores";
             // 
+            // btAddProg
+            // 
+            this.btAddProg.BorderRadius = 7;
+            this.btAddProg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btAddProg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btAddProg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btAddProg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btAddProg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.btAddProg.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btAddProg.ForeColor = System.Drawing.Color.White;
+            this.btAddProg.IndicateFocus = true;
+            this.btAddProg.Location = new System.Drawing.Point(393, 443);
+            this.btAddProg.Name = "btAddProg";
+            this.btAddProg.Size = new System.Drawing.Size(267, 28);
+            this.btAddProg.TabIndex = 62;
+            this.btAddProg.Text = "Adicionar Dados";
+            this.btAddProg.Click += new System.EventHandler(this.btAddProg_Click);
+            // 
             // cbGestorProg
             // 
             this.cbGestorProg.BackColor = System.Drawing.Color.Transparent;
@@ -358,7 +398,7 @@
             this.cbGestorProg.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbGestorProg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbGestorProg.ItemHeight = 30;
-            this.cbGestorProg.Location = new System.Drawing.Point(392, 313);
+            this.cbGestorProg.Location = new System.Drawing.Point(392, 321);
             this.cbGestorProg.Name = "cbGestorProg";
             this.cbGestorProg.Size = new System.Drawing.Size(267, 36);
             this.cbGestorProg.TabIndex = 61;
@@ -403,7 +443,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(390, 294);
+            this.label11.Location = new System.Drawing.Point(390, 302);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 16);
@@ -558,7 +598,7 @@
             this.btDeleteProg.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btDeleteProg.ForeColor = System.Drawing.Color.White;
             this.btDeleteProg.IndicateFocus = true;
-            this.btDeleteProg.Location = new System.Drawing.Point(393, 389);
+            this.btDeleteProg.Location = new System.Drawing.Point(393, 409);
             this.btDeleteProg.Name = "btDeleteProg";
             this.btDeleteProg.Size = new System.Drawing.Size(267, 28);
             this.btDeleteProg.TabIndex = 47;
@@ -576,7 +616,7 @@
             this.btGravarProg.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btGravarProg.ForeColor = System.Drawing.Color.White;
             this.btGravarProg.IndicateFocus = true;
-            this.btGravarProg.Location = new System.Drawing.Point(393, 354);
+            this.btGravarProg.Location = new System.Drawing.Point(393, 374);
             this.btGravarProg.Name = "btGravarProg";
             this.btGravarProg.Size = new System.Drawing.Size(267, 28);
             this.btGravarProg.TabIndex = 48;
@@ -644,5 +684,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2ComboBox cbGestorProg;
+        private Guna.UI2.WinForms.Guna2Button btAddGest;
+        private Guna.UI2.WinForms.Guna2Button btAddProg;
     }
 }
