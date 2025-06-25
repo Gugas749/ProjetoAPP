@@ -60,7 +60,7 @@ namespace iTasks
             // Cria uma outra list pra nao ter os id´s associados e nao dar conflito com a listbox do gestor
             cbGestorProg.DataSource = listGestor.Select(g => new {
                 Id = g.Id,
-                Nome = g.Nome
+                Nome = CaesarCipher.Decrypt(g.Nome, 10)
             }).ToList();
 
             cbGestorProg.DisplayMember = "Nome";
@@ -76,7 +76,7 @@ namespace iTasks
                 txtIdGestor.Text = gestor.Id.ToString();
                 txtNomeGestor.Text = gestor.Nome;
                 txtUsernameGestor.Text = gestor.Username;
-                txtPasswordGestor.Text = gestor.Password;
+                txtPasswordGestor.Text = CaesarCipher.Decrypt(gestor.Password, 10);
 
                 if (gestor is Gestor userGestor)
                 {
@@ -217,7 +217,7 @@ namespace iTasks
                 txtIdProg.Text = prog.Id.ToString();
                 txtNomeProg.Text = prog.Nome;
                 txtUsernameProg.Text = prog.Username;
-                txtPasswordProg.Text = prog.Password;
+                txtPasswordProg.Text = CaesarCipher.Decrypt(prog.Password, 10);
 
                 if (prog is Programador userprog)
                 {

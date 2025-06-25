@@ -403,7 +403,7 @@ namespace iTasks
 
             if (user != null && user.Id != 0)
             {
-                lbBemVindo.Text = "Bem vindo: " + user.Username.ToString();
+                lbBemVindo.Text = "Bem vindo: " + CaesarCipher.Decrypt(user.Username.ToString(), 10);
             }
 
             if (user is Programador programador)

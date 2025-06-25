@@ -19,10 +19,10 @@ namespace iTasks.Controller
                     List<Utilizador> users = db.Utilizadores.ToList(); // SELECT * FROM Utilizadores
                     foreach (Utilizador selectedUser in users)
                     {
-                        if (selectedUser.Username == CaesarCipher.Encrypt(insertedUsername, 10))
+                        if (selectedUser.Username == insertedUsername)
                         {
                             response = 1;
-                            if (selectedUser.Password == CaesarCipher.Encrypt(insertedPassword, 10))
+                            if (selectedUser.Password == insertedPassword)
                             {
                                 response = 2;
                                 user = selectedUser;

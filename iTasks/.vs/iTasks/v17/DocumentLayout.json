@@ -3,27 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\controller\\controllerfrmgereutilizadores .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\controller\\controllerfrmgereutilizadores .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\controller\\controllerfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\controller\\controllerfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,20 +54,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "ControllerFrmGereUtilizadores .cs",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Controller\\ControllerFrmGereUtilizadores .cs",
+              "RelativeDocumentMoniker": "iTasks\\Controller\\ControllerFrmGereUtilizadores .cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Controller\\ControllerFrmGereUtilizadores .cs",
+              "RelativeToolTip": "iTasks\\Controller\\ControllerFrmGereUtilizadores .cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T22:10:17.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ControllerFrmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Controller\\ControllerFrmLogin.cs",
+              "RelativeDocumentMoniker": "iTasks\\Controller\\ControllerFrmLogin.cs",
+              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Controller\\ControllerFrmLogin.cs",
+              "RelativeToolTip": "iTasks\\Controller\\ControllerFrmLogin.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIA6wBIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T22:01:20.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "frmKanban.cs",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\frmKanban.cs",
               "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
               "RelativeToolTip": "iTasks\\Views\\frmKanban.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAKUBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIoBAAAAAAAAAAAowJEBAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T21:55:12.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "frmKanban.cs [Design]",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmKanban.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\frmKanban.cs",
@@ -71,20 +105,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "frmGereUtilizadores.cs",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmGereUtilizadores.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\frmGereUtilizadores.cs",
               "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmGereUtilizadores.cs",
               "RelativeToolTip": "iTasks\\Views\\frmGereUtilizadores.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAqwIYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAswEcAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T21:50:15.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "frmGereUtilizadores.cs [Design]",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmGereUtilizadores.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\frmGereUtilizadores.cs",
@@ -96,28 +130,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmLogin.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\frmLogin.cs",
               "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmLogin.cs",
               "RelativeToolTip": "iTasks\\Views\\frmLogin.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwCkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwCcAAACZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T21:49:37.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "frmLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmLogin.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\frmLogin.cs",
               "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\frmLogin.cs [Design]",
               "RelativeToolTip": "iTasks\\Views\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T21:49:36.429Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-25T21:49:36.429Z"
             }
           ]
         }

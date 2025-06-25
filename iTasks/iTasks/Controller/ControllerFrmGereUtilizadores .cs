@@ -54,7 +54,14 @@ namespace iTasks.Controller
             {
                 try
                 {
-                    gestores = db.Utilizadores.OfType<Gestor>().ToList();
+                    List<Gestor> aux = db.Utilizadores.OfType<Gestor>().ToList();
+                    foreach (var a in aux)
+                    {
+                        Gestor programador = a as Gestor;
+                        programador.Username = CaesarCipher.Decrypt(a.Username, 10);
+                        programador.Nome = CaesarCipher.Decrypt(a.Nome, 10);
+                        gestores.Add(programador);
+                    }
                 }
                 catch (Exception er)
                 {
@@ -71,7 +78,15 @@ namespace iTasks.Controller
             {
                 try
                 {
-                    progs = db.Utilizadores.OfType<Programador>().ToList();
+                    List<Programador> aux = db.Utilizadores.OfType<Programador>().ToList();
+                    foreach(var a in aux)
+                    {
+                        Programador programador = a as Programador;
+                        programador.Username = CaesarCipher.Decrypt(a.Username, 10);
+                        programador.Nome = CaesarCipher.Decrypt(a.Nome, 10);
+                        progs.Add(programador);
+                    }
+
                 }
                 catch (Exception er)
                 {
