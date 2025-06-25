@@ -36,9 +36,9 @@ Adicionar Gestor:
 using (var db = new DBContext())
 {
     Gestor user = new Gestor();
-    user.Nome = "Nome do utilizador";
-    user.Username = "gest1";
-    user.Password = "1";
+    user.Nome = CaesarCipher.Encrypt("Padre", 10);
+    user.Username = CaesarCipher.Encrypt("gest1", 10);
+    user.Password = CaesarCipher.Encrypt("1", 10);
     user.GereUtilizadores = true;
     user.Departamento = Departamento.Administracao;
     db.Utilizadores.Add(user);
@@ -55,9 +55,9 @@ using (var db = new DBContext())
     if (gestor != null)
     {
         Programador prog = new Programador();
-        prog.Nome = "Programador Teste";
-        prog.Username = "prog1";
-        prog.Password = "1";
+        prog.Nome = CaesarCipher.Encrypt("prog1", 10);
+        prog.Username = CaesarCipher.Encrypt("prog1", 10);
+        prog.Password = CaesarCipher.Encrypt("1", 10);
         prog.NivelExperiencia = NivelExperiencia.Junior;
         prog.IdGestor = gestor.Id;
         prog.Gestor = gestor;
