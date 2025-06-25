@@ -159,7 +159,7 @@
             // 
             // dtInicio
             // 
-            this.dtInicio.Location = new System.Drawing.Point(175, 346);
+            this.dtInicio.Location = new System.Drawing.Point(175, 357);
             this.dtInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtInicio.Name = "dtInicio";
             this.dtInicio.Size = new System.Drawing.Size(265, 22);
@@ -168,7 +168,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 350);
+            this.label6.Location = new System.Drawing.Point(8, 361);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 16);
@@ -178,7 +178,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 383);
+            this.label7.Location = new System.Drawing.Point(23, 394);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 16);
@@ -187,7 +187,7 @@
             // 
             // dtFim
             // 
-            this.dtFim.Location = new System.Drawing.Point(175, 378);
+            this.dtFim.Location = new System.Drawing.Point(175, 389);
             this.dtFim.Margin = new System.Windows.Forms.Padding(4);
             this.dtFim.Name = "dtFim";
             this.dtFim.Size = new System.Drawing.Size(265, 22);
@@ -281,7 +281,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(11, 411);
+            this.panel2.Location = new System.Drawing.Point(11, 422);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(745, 2);
@@ -289,7 +289,7 @@
             // 
             // butGravar
             // 
-            this.butGravar.Location = new System.Drawing.Point(421, 421);
+            this.butGravar.Location = new System.Drawing.Point(421, 432);
             this.butGravar.Margin = new System.Windows.Forms.Padding(4);
             this.butGravar.Name = "butGravar";
             this.butGravar.Size = new System.Drawing.Size(188, 28);
@@ -300,7 +300,7 @@
             // 
             // butFechar
             // 
-            this.butFechar.Location = new System.Drawing.Point(617, 421);
+            this.butFechar.Location = new System.Drawing.Point(617, 432);
             this.butFechar.Margin = new System.Windows.Forms.Padding(4);
             this.butFechar.Name = "butFechar";
             this.butFechar.Size = new System.Drawing.Size(139, 28);

@@ -144,6 +144,7 @@
             this.btGravar.Size = new System.Drawing.Size(177, 28);
             this.btGravar.TabIndex = 53;
             this.btGravar.Text = "Gravar Dados";
+            this.btGravar.Click += new System.EventHandler(this.btGravar_Click);
             // 
             // txtDesc
             // 
@@ -155,7 +156,6 @@
             this.txtDesc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtDesc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDesc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDesc.Enabled = false;
             this.txtDesc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -163,7 +163,7 @@
             this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.PlaceholderText = "Id";
+            this.txtDesc.PlaceholderText = "Descrição";
             this.txtDesc.SelectedText = "";
             this.txtDesc.Size = new System.Drawing.Size(363, 86);
             this.txtDesc.TabIndex = 54;
