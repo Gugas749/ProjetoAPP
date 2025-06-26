@@ -14,5 +14,6 @@ namespace iTasks.Model
         public DbSet<Utilizador> Utilizadores { get; set; }
         public DbSet<Programador> Programadores { get; set; }
         public DbSet<Gestor> Gestores { get; set; }
+        public DbSet<TarefaGestor> TarefasGestors { get; set; }
     }
 }

@@ -51,6 +51,12 @@ namespace iTasks
 
             lstListaGestores.DisplayMember = "Nome";
             lstListaGestores.ValueMember = "Id";
+            int aux = 0;
+            foreach (var user in listGestor)
+            {
+                aux++;
+            }
+            lbTotalGest.Text = "Total: " + aux;
         }
         private void getListUsers()
         {
@@ -225,6 +231,12 @@ namespace iTasks
 
             lstListaProgramadores.DisplayMember = "Nome";
             lstListaProgramadores.ValueMember = "Id";
+            int aux = 0;
+            foreach (var user in listProg)
+            {
+                aux++;
+            }
+            lbTotalProg.Text = "Total: " + aux;
         }
         private void getListProg()
         {

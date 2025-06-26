@@ -65,6 +65,8 @@
             this.btDeleteProg = new Guna.UI2.WinForms.Guna2Button();
             this.btGravarProg = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbTotalGest = new System.Windows.Forms.Label();
+            this.lbTotalProg = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -118,6 +120,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lbTotalGest);
             this.groupBox2.Controls.Add(this.btAddGest);
             this.groupBox2.Controls.Add(this.chkGereUtilizadores);
             this.groupBox2.Controls.Add(this.cbDepartamento);
@@ -345,6 +348,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lbTotalProg);
             this.groupBox3.Controls.Add(this.btAddProg);
             this.groupBox3.Controls.Add(this.cbGestorProg);
             this.groupBox3.Controls.Add(this.cbNivelProg);
@@ -627,6 +631,26 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lbTotalGest
+            // 
+            this.lbTotalGest.AutoSize = true;
+            this.lbTotalGest.Location = new System.Drawing.Point(77, 19);
+            this.lbTotalGest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTotalGest.Name = "lbTotalGest";
+            this.lbTotalGest.Size = new System.Drawing.Size(44, 16);
+            this.lbTotalGest.TabIndex = 54;
+            this.lbTotalGest.Text = "Total: ";
+            // 
+            // lbTotalProg
+            // 
+            this.lbTotalProg.AutoSize = true;
+            this.lbTotalProg.Location = new System.Drawing.Point(102, 19);
+            this.lbTotalProg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTotalProg.Name = "lbTotalProg";
+            this.lbTotalProg.Size = new System.Drawing.Size(41, 16);
+            this.lbTotalProg.TabIndex = 55;
+            this.lbTotalProg.Text = "Total:";
+            // 
             // frmGereUtilizadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -686,5 +710,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbGestorProg;
         private Guna.UI2.WinForms.Guna2Button btAddGest;
         private Guna.UI2.WinForms.Guna2Button btAddProg;
+        private System.Windows.Forms.Label lbTotalGest;
+        private System.Windows.Forms.Label lbTotalProg;
     }
 }

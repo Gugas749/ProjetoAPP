@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using iTasks.Controller;
 using iTasks.Model;
+using iTasks.Views;
 
 namespace iTasks
 {
@@ -292,6 +293,7 @@ namespace iTasks
             listagensToolStripMenuItem.Enabled = false;
             tarefasTerminadasToolStripMenuItem.Enabled = false;
             tarefasEmCursoToolStripMenuItem.Enabled = false;
+            formTarefaGestorToolStripMenuItem.Enabled = false;
             //----------------------
 
             switch (role)
@@ -337,6 +339,7 @@ namespace iTasks
                     listagensToolStripMenuItem.Enabled = true;
                     tarefasTerminadasToolStripMenuItem.Enabled = true;
                     tarefasEmCursoToolStripMenuItem.Enabled = true;
+                    formTarefaGestorToolStripMenuItem.Enabled = true;
                     //----------------------
                     break;
             }
@@ -419,5 +422,11 @@ namespace iTasks
             loadLists();
         }
         #endregion
+
+        private void formTarefaGestorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTarefaGestor frm = new FormTarefaGestor(user);
+            frm.ShowDialog();
+        }
     }
 }

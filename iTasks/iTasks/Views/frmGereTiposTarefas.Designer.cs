@@ -127,6 +127,7 @@
             this.butDeleteTipoTarefa.Size = new System.Drawing.Size(177, 28);
             this.butDeleteTipoTarefa.TabIndex = 52;
             this.butDeleteTipoTarefa.Text = "Apagar";
+            this.butDeleteTipoTarefa.Click += new System.EventHandler(this.butDeleteTipoTarefa_Click);
             // 
             // btGravar
             // 

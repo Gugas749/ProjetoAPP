@@ -51,6 +51,7 @@
             this.butTerminarTarefa = new Guna.UI2.WinForms.Guna2Button();
             this.butVerPrevConclusao = new Guna.UI2.WinForms.Guna2Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.formTarefaGestorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -136,6 +137,7 @@
             this.ficheiroToolStripMenuItem,
             this.utilizadoresToolStripMenuItem,
             this.listagensToolStripMenuItem,
+            this.formTarefaGestorToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -315,6 +317,13 @@
             // 
             this.saveFileDialog1.FileName = "Tarefas_Feitas";
             // 
+            // formTarefaGestorToolStripMenuItem
+            // 
+            this.formTarefaGestorToolStripMenuItem.Name = "formTarefaGestorToolStripMenuItem";
+            this.formTarefaGestorToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.formTarefaGestorToolStripMenuItem.Text = "FormTarefaGestor";
+            this.formTarefaGestorToolStripMenuItem.Click += new System.EventHandler(this.formTarefaGestorToolStripMenuItem_Click);
+            // 
             // frmKanban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,5 +380,6 @@
         private Guna.UI2.WinForms.Guna2Button butVerPrevConclusao;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formTarefaGestorToolStripMenuItem;
     }
 }

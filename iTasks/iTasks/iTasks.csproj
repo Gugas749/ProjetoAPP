@@ -65,6 +65,7 @@
     <Compile Include="Controller\ControllerFrmKanban.cs" />
     <Compile Include="Controller\ControllerFrmLogin.cs" />
     <Compile Include="Controller\ControllerFrmsConsultar.cs" />
+    <Compile Include="Controller\ControllerFormTarefaGestor.cs" />
     <Compile Include="Controller\ControllerFrmTiposTarefas.cs" />
     <Compile Include="Diversao.cs" />
     <Compile Include="Model\DBContext.cs" />
@@ -73,7 +74,14 @@
     <Compile Include="Model\Programador.cs" />
     <Compile Include="Model\Tarefa.cs" />
     <Compile Include="Model\TipoTarefa.cs" />
+    <Compile Include="Model\TarefaGestor.cs" />
     <Compile Include="Model\Utilizador.cs" />
+    <Compile Include="Views\FormTarefaGestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormTarefaGestor.Designer.cs">
+      <DependentUpon>FormTarefaGestor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmConsultarTarefasConcluidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +126,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\FormTarefaGestor.resx">
+      <DependentUpon>FormTarefaGestor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmConsultarTarefasConcluidas.resx">
       <DependentUpon>frmConsultarTarefasConcluidas.cs</DependentUpon>
     </EmbeddedResource>

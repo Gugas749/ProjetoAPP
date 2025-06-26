@@ -80,3 +80,4 @@ C:\Users\piogo\Downloads\AlexandreConrado2241567_GuilhermeSilva2241570_DiogoSoar
 C:\Users\piogo\Downloads\AlexandreConrado2241567_GuilhermeSilva2241570_DiogoSoares2241572\Projeto\iTasks\iTasks\obj\Debug\iTasks.csproj.Up2Date
 C:\Users\piogo\Downloads\AlexandreConrado2241567_GuilhermeSilva2241570_DiogoSoares2241572\Projeto\iTasks\iTasks\obj\Debug\iTasks.exe
 C:\Users\piogo\Downloads\AlexandreConrado2241567_GuilhermeSilva2241570_DiogoSoares2241572\Projeto\iTasks\iTasks\obj\Debug\iTasks.pdb
+C:\Users\conra\Desktop\IPL\1-ano\2-Semestre\apps\Projeto\iTasks\iTasks\obj\Debug\iTasks.Views.FormTarefaGestor.resources
