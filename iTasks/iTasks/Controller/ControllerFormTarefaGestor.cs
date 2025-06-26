@@ -73,5 +73,26 @@ namespace iTasks.Controller
 
             return response;
         }
+        public int GetNextID()
+        {
+            int nextId = 0;
+            using (var db = new DBContext())
+            {
+                try
+                {
+                    List<TarefaGestor> aux = db.TarefasGestors.ToList();
+                    foreach (TarefaGestor a in aux)
+                    {
+                        nextId++;
+                    }
+                    nextId++;
+                }
+                catch
+                {
+
+                }
+            }
+            return nextId;
+        }
     }
 }

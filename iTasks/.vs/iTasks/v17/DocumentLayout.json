@@ -3,15 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\formtarefagestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\formtarefagestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\formtarefagestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\controller\\controllerformtarefagestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\controller\\controllerformtarefagestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|c:\\users\\conra\\desktop\\ipl\\1-ano\\2-semestre\\apps\\projeto\\itasks\\itasks\\views\\formtarefagestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\itasks\\views\\formtarefagestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{169F35CB-D088-470F-929A-1B10E05D53A1}|iTasks\\iTasks.csproj|solutionrelative:itasks\\views\\formtarefagestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,33 +30,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ControllerFormTarefaGestor.cs",
-              "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Controller\\ControllerFormTarefaGestor.cs",
-              "RelativeDocumentMoniker": "iTasks\\Controller\\ControllerFormTarefaGestor.cs",
-              "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Controller\\ControllerFormTarefaGestor.cs",
-              "RelativeToolTip": "iTasks\\Controller\\ControllerFormTarefaGestor.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAD4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T14:14:54.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FormTarefaGestor.cs",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\FormTarefaGestor.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\FormTarefaGestor.cs",
               "ToolTip": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\FormTarefaGestor.cs",
               "RelativeToolTip": "iTasks\\Views\\FormTarefaGestor.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAqwCMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T13:52:25.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FormTarefaGestor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\conra\\Desktop\\IPL\\1-ano\\2-Semestre\\apps\\Projeto\\iTasks\\iTasks\\Views\\FormTarefaGestor.cs",
               "RelativeDocumentMoniker": "iTasks\\Views\\FormTarefaGestor.cs",

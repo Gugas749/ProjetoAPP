@@ -33,14 +33,12 @@ namespace iTasks.Views
         private void loadList()
         {
             lstListaTarefas.Items.Clear();
-            nextId = 0;
+            nextId = controller.GetNextID();
             tarefas = controller.GetTarefas(user);
             foreach(TarefaGestor taref in tarefas)
             {
                 lstListaTarefas.Items.Add(taref.ToString());
-                nextId++;
             }
-
             txtId.Text = nextId.ToString();
         }
 
