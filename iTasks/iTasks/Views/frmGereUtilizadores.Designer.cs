@@ -322,8 +322,8 @@
             this.btDeleteGestor.Name = "btDeleteGestor";
             this.btDeleteGestor.Size = new System.Drawing.Size(267, 28);
             this.btDeleteGestor.TabIndex = 45;
-            this.btDeleteGestor.Text = "Eleminar";
-            this.btDeleteGestor.Click += new System.EventHandler(this.btDeleteProg_Click);
+            this.btDeleteGestor.Text = "Eliminar";
+            this.btDeleteGestor.Click += new System.EventHandler(this.btDeleteGestor_Click);
             // 
             // btGravarGestor
             // 
@@ -602,7 +602,7 @@
             this.btDeleteProg.Name = "btDeleteProg";
             this.btDeleteProg.Size = new System.Drawing.Size(267, 28);
             this.btDeleteProg.TabIndex = 47;
-            this.btDeleteProg.Text = "Eleminar";
+            this.btDeleteProg.Text = "Eliminar";
             this.btDeleteProg.Click += new System.EventHandler(this.btDeleteProg_Click);
             // 
             // btGravarProg

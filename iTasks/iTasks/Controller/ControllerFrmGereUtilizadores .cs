@@ -37,17 +37,24 @@ namespace iTasks.Controller
             {
                 try
                 {
-                    db.Entry(utilizador).State = System.Data.Entity.EntityState.Deleted;
-                    db.SaveChanges();
-                    aux = 1;
+                    // da get ao ID
+                    var userToDelete = db.Utilizadores.FirstOrDefault(u => u.Id == utilizador.Id);
+
+                    if (userToDelete != null)
+                    {
+                        db.Utilizadores.Remove(userToDelete);
+                        db.SaveChanges();
+                        aux = 1;
+                    }
                 }
                 catch (Exception e)
                 {
-
+                    Console.WriteLine("Erro no delete: " + e.Message);
                 }
             }
             return aux;
         }
+
         public List<Gestor> GetGestors()
         {
             List<Gestor> gestores = new List<Gestor>();

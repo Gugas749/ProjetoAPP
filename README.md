@@ -50,7 +50,11 @@ Adicionar Programador:
 ```
 using (var db = new DBContext())
 {
-    var gestor = db.Utilizadores.OfType<Gestor>().FirstOrDefault(g => g.Username == "gest1");
+    string encryptedUsername = CaesarCipher.Encrypt("gest1", 10);
+
+    var gestor = db.Utilizadores
+                   .OfType<Gestor>()
+                   .FirstOrDefault(g => g.Username == encryptedUsername);
 
     if (gestor != null)
     {
@@ -66,23 +70,7 @@ using (var db = new DBContext())
         db.SaveChanges();
     }
 }
-```
 
-Dados Utilizadores:
-```
-SET IDENTITY_INSERT [dbo].[Utilizadors] ON
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (1, N'Padre', N'gest1', N'1', 2, 1, NULL, NULL, N'Gestor', NULL)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (2, N'Joao', N'gest2', N'1', 2, 1, NULL, NULL, N'Gestor', NULL)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (3, N'Pedro', N'gest3', N'1', 2, 0, NULL, NULL, N'Gestor', NULL)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (4, N'Diogo', N'gest2', N'1', 0, 1, NULL, NULL, N'Gestor', NULL)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (7, N'Gui', N'gest3', N'123', 0, 1, NULL, NULL, N'Gestor', NULL)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (8, N'Mariquinhas', N'gest2', N'1', 0, 1, NULL, NULL, N'Gestor', NULL)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (9, N'Joaquim3', N'gest3', N'1', 2, 0, NULL, NULL, N'Gestor', NULL)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (10, N'prog1', N'prog1', N'1', NULL, NULL, 0, 9, N'Programador', 1)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (11, N'prog2', N'prog2', N'1', NULL, NULL, 1, 4, N'Programador', 2)
-INSERT INTO [dbo].[Utilizadors] ([Id], [Nome], [Username], [Password], [Departamento], [GereUtilizadores], [NivelExperiencia], [IdGestor], [Discriminator], [Gestor_Id]) VALUES (12, N'prog3', N'prog3', N'1', NULL, NULL, 1, 1, N'Programador', 3)
-SET IDENTITY_INSERT [dbo].[Utilizadors] OFF
-```
 
 Dados Tarefas:
 ```

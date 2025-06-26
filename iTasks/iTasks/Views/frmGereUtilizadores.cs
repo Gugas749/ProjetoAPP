@@ -188,6 +188,7 @@ namespace iTasks
                     break;
             }
         }
+
         private void btDeleteGestor_Click(object sender, EventArgs e)
         {
             if (lstListaGestores.SelectedIndex > -1)
@@ -205,6 +206,7 @@ namespace iTasks
                         case 1:
                             MessageBox.Show("Utilizador eliminado com sucesso.");
                             loadListGest();
+                            loadListProg();
                             break;
                     }
                 }
@@ -335,25 +337,7 @@ namespace iTasks
                     break;
             }
         }
-        private void btDeleteProg_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Deseja mesmo eleminar? \nUser selecionado: " + prog.Nome, "Confirmação", MessageBoxButtons.YesNo);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                int aux = controller.deletedata(prog);
-                switch (aux)
-                {
-                    case 0:
-                        MessageBox.Show("Erro ao eliminar utilizador");
-                        break;
-                    case 1:
-                        MessageBox.Show("Utilizador eliminado com sucesso.");
-                        loadListGest();
-                        break;
-                }
-            }
-        }
+        
         #endregion
 
         private void btAddGest_Click(object sender, EventArgs e)
@@ -369,6 +353,27 @@ namespace iTasks
             if (allFieldsFilledProg())
             {
                 adddataProg();
+            }
+        }
+
+        private void btDeleteProg_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja mesmo eleminar? \nUser selecionado: " + prog.Nome, "Confirmação", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                int aux = controller.deletedata(prog);
+                switch (aux)
+                {
+                    case 0:
+                        MessageBox.Show("Erro ao eliminar utilizador");
+                        break;
+                    case 1:
+                        MessageBox.Show("Utilizador eliminado com sucesso.");
+                        loadListGest();
+                        loadListProg();
+                        break;
+                }
             }
         }
     }
